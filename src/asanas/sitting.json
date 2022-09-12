@@ -1,0 +1,198 @@
+[
+  {
+    "sanskrit": "Akarna Dhanurasana",
+    "english": "Archer",
+    "type": "Sitting",
+    "spine": "",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Baddha Konasana",
+    "english": "Bound angle",
+    "type": "Sitting",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Balasana",
+    "english": "Child's pose",
+    "type": "Sitting",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Bharadvajasana",
+    "english": "Bharadwaja's twist",
+    "type": "Sitting",
+    "spine": "Twist",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Dandasana",
+    "english": "Staff",
+    "type": "Sitting",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Garbha Pindasana",
+    "english": "Embryo in Womb",
+    "type": "Sitting",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Gomukhasana",
+    "english": "Cow-faced",
+    "type": "Sitting",
+    "spine": "",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Hanumanasana",
+    "english": "Hanuman's Pose",
+    "type": "Sitting",
+    "spine": "",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Janusirsasana",
+    "english": "Head-to-Knee",
+    "type": "Sitting",
+    "spine": "Forward bend",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Kraunchasana",
+    "english": "Heron",
+    "type": "Sitting",
+    "spine": "",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Kurmasana",
+    "english": "Tortoise",
+    "type": "Sitting",
+    "spine": "Forward bend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Mandukasana]]",
+    "english": "Frog",
+    "type": "Sitting",
+    "spine": "",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Marichyasana",
+    "english": "Marichi's Pose",
+    "type": "Sitting",
+    "spine": "Twist",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Matsyendrasana",
+    "english": "Lord of the Fishes",
+    "type": "Sitting",
+    "spine": "Twist",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Navasana",
+    "english": "Boat",
+    "type": "Sitting",
+    "spine": "Forward bend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Padmasana",
+    "english": "Lotus",
+    "type": "Sitting",
+    "spine": "",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Paschimottanasana",
+    "english": "Seated Forward Bend",
+    "type": "Sitting",
+    "spine": "Forward bend",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Rajakapotasana",
+    "english": "King Pigeon",
+    "type": "Sitting",
+    "spine": "Backbend",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Samakonasana",
+    "english": "Side splits",
+    "type": "Sitting",
+    "spine": "",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Sukhasana",
+    "english": "Easy",
+    "type": "Sitting",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Upavishta Konasana",
+    "english": "Wide leg seated forward fold",
+    "type": "Sitting",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Kapotasana",
+    "english": "Pigeon",
+    "type": "Sitting",
+    "spine": "Backbend",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Malasana",
+    "english": "Low squat",
+    "type": "Sitting",
+    "spine": "Forward bend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Pashasana",
+    "english": "Squatting twist",
+    "type": "Sitting",
+    "spine": "Twist",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Ushtrasana",
+    "english": "Camel",
+    "type": "Sitting",
+    "spine": "Backbend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Vajrasana",
+    "english": "Kneeling",
+    "type": "Sitting",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Virasana",
+    "english": "Hero",
+    "type": "Sitting",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Padangushthasana",
+    "english": "Toe Stand",
+    "type": "Sitting",
+    "spine": "",
+    "bilateral": false
+  }
+]

@@ -1,0 +1,114 @@
+[
+  {
+    "sanskrit": "Adho Mukha Vrikshasana",
+    "english": "Handstand",
+    "type": "Balancing",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Astavakrasana",
+    "english": "Eight-angled pose",
+    "type": "Balancing",
+    "spine": "",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Bakasana",
+    "english": "Crow",
+    "type": "Balancing",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Bhujapidasana",
+    "english": "Arm-pressing posture",
+    "type": "Balancing",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Kaundinyasana",
+    "english": "Kaundinya pose",
+    "type": "Balancing",
+    "spine": "Forward bend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Kukkutasana",
+    "english": "Cockerel",
+    "type": "Balancing",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Lolasana",
+    "english": "Pendant",
+    "type": "Balancing",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Mayurasana",
+    "english": "Peacock",
+    "type": "Balancing",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Pincha Mayurasana",
+    "english": "Feathered Peacock",
+    "type": "Balancing",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Tittibhasana",
+    "english": "Firefly",
+    "type": "Balancing",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Tulasana",
+    "english": "Scales",
+    "type": "Balancing",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Vasishtasana",
+    "english": "Side plank",
+    "type": "Balancing",
+    "spine": "",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Shirshasana",
+    "english": "Headstand",
+    "type": "Balancing",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Vrischikasana",
+    "english": "Scorpion",
+    "type": "Balancing",
+    "spine": "Backbend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Eka Pada Koundinyanasana I",
+    "english": "Eka Pada",
+    "type": "Balancing",
+    "spine": "",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Eka Pada Koundinyanasana II",
+    "english": "Twisted Eka Pada",
+    "type": "Balancing",
+    "spine": "",
+    "bilateral": true
+  }
+]

@@ -1,0 +1,212 @@
+[
+  {
+    "sanskrit": "Anantasana",
+    "english": "Hand to big toe, reclining side",
+    "type": "Reclining",
+    "spine": "",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Ashtanga Namaskara",
+    "english": "Knees, chest, chin",
+    "type": "Reclining",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Bhairavasana",
+    "english": "Formidable",
+    "type": "Reclining",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Bhekasana",
+    "english": "Frog",
+    "type": "Reclining",
+    "spine": "Backbend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Bhujangasana",
+    "english": "Cobra",
+    "type": "Reclining",
+    "spine": "Backbend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "",
+    "english": "Sphinx",
+    "type": "Reclining",
+    "spine": "Backbend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Chaturanga Dandasana",
+    "english": "Low Plank",
+    "type": "Reclining",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Dhanurasana",
+    "english": "Bow",
+    "type": "Reclining",
+    "spine": "Backbend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Ardha Dhanurasana",
+    "english": "Half Bow",
+    "type": "Reclining",
+    "spine": "Backbend",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Jathara Parivartanasana",
+    "english": "Belly twist",
+    "type": "Reclining",
+    "spine": "Twist",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Makarasana",
+    "english": "Crocodile",
+    "type": "Reclining",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Matsyasana",
+    "english": "Fish",
+    "type": "Reclining",
+    "spine": "Backbend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Shalabhasana",
+    "english": "Locust",
+    "type": "Reclining",
+    "spine": "Backbend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Shavasana",
+    "english": "Corpse",
+    "type": "Reclining",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Supta Padangusthasana",
+    "english": "Reclining hand to big toe",
+    "type": "Reclining",
+    "spine": "",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Urdhva Mukha Shvanasana",
+    "english": "Upward-Facing Dog",
+    "type": "Reclining",
+    "spine": "Backbend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Yoganidrasana",
+    "english": "Feet behind head",
+    "type": "Reclining",
+    "spine": "Forward bend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Halasana",
+    "english": "Plough",
+    "type": "Reclining",
+    "spine": "Forward bend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Karnapidasana",
+    "english": "Ear-pressing",
+    "type": "Reclining",
+    "spine": "Forward bend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Sarvangasana",
+    "english": "Shoulder Stand",
+    "type": "Reclining",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Setu Bandha Sarvangasana",
+    "english": "Shoulder supported bridge",
+    "type": "Reclining",
+    "spine": "Backbend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Urdhva Dhanurasana",
+    "english": "Wheel",
+    "type": "Reclining",
+    "spine": "Backbend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Viparita Dandasana",
+    "english": "Inverted Staff",
+    "type": "Reclining",
+    "spine": "Backbend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Camatkarasana",
+    "english": "Wild thing",
+    "type": "Reclining",
+    "spine": "Backbend",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Viparita Karani",
+    "english": "Legs up the wall",
+    "type": "Reclining",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Ananda Balasana",
+    "english": "Happy baby",
+    "type": "Reclining",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Supta Baddha Konasana",
+    "english": "Reclining bound angle",
+    "type": "Reclining",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Purvottanasana",
+    "english": "Reverse plank",
+    "type": "Reclining",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Supta Matsyendrasana",
+    "english": "Supine twist",
+    "type": "Reclining",
+    "spine": "",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Shashankasana",
+    "english": "Rabbit",
+    "type": "Reclining",
+    "spine": "",
+    "bilateral": false
+  }
+]
