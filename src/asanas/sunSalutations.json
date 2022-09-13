@@ -1,10 +1,41 @@
 [
   [
-    "standing",
-    "arms overhead"
+    {
+    "sanskrit": "Adho Mukha Shvanasana",
+    "english": "Downward-Facing Dog",
+    "type": "Standing",
+    "spine": "Forward bend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Anjaneyasana",
+    "english": "Crescent Moon",
+    "type": "Standing",
+    "spine": "Backbend",
+    "bilateral": true
+  }
   ],
   [
-    "standing",
-    "chair"
+    {
+      "sanskrit": "Bidalasana",
+      "english": "Cat",
+      "type": "Standing",
+      "spine": "Backbend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Bitilasana",
+      "english": "Cow",
+      "type": "Standing",
+      "spine": "Forward bend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Adho Mukha Shvanasana",
+      "english": "Downward-Facing Dog",
+      "type": "Standing",
+      "spine": "Forward bend",
+      "bilateral": false
+    }
   ]
 ]
