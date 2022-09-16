@@ -1,33 +1,53 @@
 [
   [
     {
-    "sanskrit": "Adho Mukha Shvanasana",
-    "english": "Downward-Facing Dog",
-    "type": "Standing",
-    "spine": "Forward bend",
-    "bilateral": false
-  },
-  {
-    "sanskrit": "Anjaneyasana",
-    "english": "Crescent Moon",
-    "type": "Standing",
-    "spine": "Backbend",
-    "bilateral": true
-  }
-  ],
-  [
-    {
-      "sanskrit": "Bidalasana",
-      "english": "Cat",
+      "sanskrit": "Pranamasana",
+      "english": "Prayer",
       "type": "Standing",
-      "spine": "Backbend",
+      "spine": "",
       "bilateral": false
     },
     {
-      "sanskrit": "Bitilasana",
-      "english": "Cow",
+      "sanskrit": "Urdhva Hastasana",
+      "english": "Standing arms overhead",
+      "type": "Standing",
+      "spine": "",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Uttanasana",
+      "english": "Standing Forward Bend",
       "type": "Standing",
       "spine": "Forward bend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Anjaneyasana",
+      "english": "Crescent Moon",
+      "type": "Standing",
+      "spine": "Backbend",
+      "bilateral": true,
+      "side": "right"
+    },
+    {
+      "sanskrit": "Adho Mukha Shvanasana",
+      "english": "Downward-Facing Dog",
+      "type": "Standing",
+      "spine": "Forward bend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Ashtanga Namaskara",
+      "english": "Knees, chest, chin",
+      "type": "Reclining",
+      "spine": "",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Urdhva Mukha Shvanasana",
+      "english": "Upward-Facing Dog",
+      "type": "Reclining",
+      "spine": "Backbend",
       "bilateral": false
     },
     {
@@ -35,6 +55,28 @@
       "english": "Downward-Facing Dog",
       "type": "Standing",
       "spine": "Forward bend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Anjaneyasana",
+      "english": "Crescent Moon",
+      "type": "Standing",
+      "spine": "Backbend",
+      "bilateral": true,
+      "side": "left"
+    },
+    {
+      "sanskrit": "Uttanasana",
+      "english": "Standing Forward Bend",
+      "type": "Standing",
+      "spine": "Forward bend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Urdhva Hastasana",
+      "english": "Standing arms overhead",
+      "type": "Standing",
+      "spine": "",
       "bilateral": false
     }
   ]

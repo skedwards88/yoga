@@ -8,7 +8,6 @@ import workoutReducer from "./workoutReducer";
 import workoutInit from "./workoutInit";
 
 function App() {
-
   const [showSettings, setShowSettings] = React.useState(false);
 
   const [workoutState, dispatchWorkoutState] = React.useReducer(

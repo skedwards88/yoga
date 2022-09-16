@@ -1,8 +1,8 @@
 import sunSalutations from "./asanas/sunSalutations.json";
-import standingPoses from "./asanas/standing.json"
-import sittingPoses from "./asanas/sitting.json"
-import recliningPoses from "./asanas/reclining.json"
-import armBalancePoses from "./asanas/armBalance.json"
+import standingPoses from "./asanas/standing.json";
+import sittingPoses from "./asanas/sitting.json";
+import recliningPoses from "./asanas/reclining.json";
+import armBalancePoses from "./asanas/armBalance.json";
 
 const PoseTypes = {
   sunSalutations: "sunSalutations",
@@ -111,10 +111,9 @@ export function getYogaSequence({
     standingSequence = [...standingSequence, ...setA, ...setB];
   }
 
-  console.log(JSON.stringify(standingSequence))
+  console.log(JSON.stringify(standingSequence));
   // Fill the remaining time with seated and reclining poses
-  const closingSec =
-    totalSec - sunSalutationSec - shavasanaSec - standingSec;
+  const closingSec = totalSec - sunSalutationSec - shavasanaSec - standingSec;
   const numClosingPoses = Math.round(closingSec / poseDurationSec);
   const numSeatedPoses = Math.floor(numClosingPoses);
   const numRecliningPoses = Math.ceil(numClosingPoses);

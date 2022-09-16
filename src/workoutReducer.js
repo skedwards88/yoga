@@ -13,8 +13,8 @@ export default function workoutReducer(currentState, payload) {
     let yogaSequence = JSON.parse(JSON.stringify(currentState.yogaSequence));
     const nextTime = yogaSequence[0].time;
     const nextPose = yogaSequence[0].pose;
-    console.log(`NEXT TIME ${nextTime}`)
-    console.log(JSON.stringify(nextPose))
+    console.log(`NEXT TIME ${nextTime}`);
+    console.log(JSON.stringify(nextPose));
 
     // Increase the time by 1 second
     const newElapsedSec = currentState.elapsedSec + 1;
@@ -28,7 +28,7 @@ export default function workoutReducer(currentState, payload) {
         ...currentState,
         elapsedSec: newElapsedSec,
         currentPose: nextPose,
-        yogaSequence: yogaSequence.slice(1,yogaSequence.length)
+        yogaSequence: yogaSequence.slice(1, yogaSequence.length),
       };
     } else {
       return {

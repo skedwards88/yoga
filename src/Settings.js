@@ -9,8 +9,12 @@ export default function Settings({
     event.preventDefault();
 
     const newTotalSec = parseInt(event.target.elements.totalSec.value);
-    const newPoseDurationSec = parseInt(event.target.elements.poseDurationSec.value);
-    const newSunSalutationDurationSec = parseInt(event.target.elements.sunSalutationDurationSec.value);
+    const newPoseDurationSec = parseInt(
+      event.target.elements.poseDurationSec.value
+    );
+    const newSunSalutationDurationSec = parseInt(
+      event.target.elements.sunSalutationDurationSec.value
+    );
 
     dispatchWorkoutState({
       action: "newWorkout",
@@ -40,7 +44,10 @@ export default function Settings({
 
           <div className="setting">
             <label htmlFor="poseDurationSec">Pose duration (sec)</label>
-            <select id="poseDurationSec" defaultValue={workoutState.poseDurationSec}>
+            <select
+              id="poseDurationSec"
+              defaultValue={workoutState.poseDurationSec}
+            >
               <option value={5}>5</option>
               <option value={10}>10</option>
               <option value={15}>15</option>
@@ -53,8 +60,13 @@ export default function Settings({
           </div>
 
           <div className="setting">
-            <label htmlFor="sunSalutationDurationSec">Sun salutation pose duration (sec)</label>
-            <select id="sunSalutationDurationSec" defaultValue={workoutState.sunSalutationDurationSec}>
+            <label htmlFor="sunSalutationDurationSec">
+              Sun salutation pose duration (sec)
+            </label>
+            <select
+              id="sunSalutationDurationSec"
+              defaultValue={workoutState.sunSalutationDurationSec}
+            >
               <option value={1}>1</option>
               <option value={2}>2</option>
               <option value={3}>3</option>
@@ -64,7 +76,6 @@ export default function Settings({
               <option value={10}>10</option>
             </select>
           </div>
-
         </div>
         <div className="button-group">
           <button type="submit">Start</button>

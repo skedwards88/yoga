@@ -1,7 +1,8 @@
 import React from "react";
 
 export default function Home({ setShowSettings }) {
-  const homeScreenPhrases = [ // todo add more?
+  const homeScreenPhrases = [
+    // todo add more?
     "Mindfulness takes practice",
   ];
 
@@ -16,15 +17,17 @@ export default function Home({ setShowSettings }) {
       </div>
       <div id="mascot"></div>
       <button
-      onClick={() => {
-        // ios won't speak unless the user clicks something first that directly causes speech
-        // so do this hack of saying nothing
-        let speech = new SpeechSynthesisUtterance("");
-        window.speechSynthesis.speak(speech);
+        onClick={() => {
+          // ios won't speak unless the user clicks something first that directly causes speech
+          // so do this hack of saying nothing
+          let speech = new SpeechSynthesisUtterance("");
+          window.speechSynthesis.speak(speech);
 
-        setShowSettings(true)
-      }}
-      >Begin</button>
+          setShowSettings(true);
+        }}
+      >
+        Begin
+      </button>
     </div>
   );
 }
