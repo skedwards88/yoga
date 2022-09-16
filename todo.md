@@ -1,0 +1,8 @@
+- sun salutations
+- new mascot
+- progress bar for single pose?
+- show time remaining for pose?
+- show time remaining for session?
+- make buttons higher on page for ios bar?
+- add language option
+- make screen not fall asleep

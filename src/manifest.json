@@ -1,0 +1,41 @@
+{
+  "name": "Yoga Bot",
+  "short_name": "Yoga Bot",
+  "description": "A yoga app",
+  "dir": "auto",
+  "lang": "en-US",
+  "display": "standalone",
+  "start_url": "../.",
+  "background_color": "#595959",
+  "theme_color": "#ffeb12",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "720x720"
+    },
+    {
+      "src": "icon_720.png",
+      "type": "image/png",
+      "sizes": "720x720"
+    },
+    {
+      "src": "maskable_icon_192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "maskable_icon_512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "maskable_icon_1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

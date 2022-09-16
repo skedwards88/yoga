@@ -1,17 +1,8 @@
-// import sunSalutations from "./sunSalutations.json";
-// import standingPoses from "./standing.json"
-// import sittingPoses from "./sitting.json"
-// import recliningPoses from "./reclining.json"
-// import armBalancePoses from "./armBalance.json"
-
-const sunSalutations = [
-  ["sun1", "sun11"],
-  ["sun2", "sun22"],
-];
-const standingPoses = ["stand1", "stand2", "stand3"];
-const sittingPoses = ["sit1", "sit2", "sit3"];
-const recliningPoses = ["lay1", "lay2", "lay3"];
-const armBalancePoses = ["arm1", "arm2", "arm3"];
+import sunSalutations from "./asanas/sunSalutations.json";
+import standingPoses from "./asanas/standing.json"
+import sittingPoses from "./asanas/sitting.json"
+import recliningPoses from "./asanas/reclining.json"
+import armBalancePoses from "./asanas/armBalance.json"
 
 const PoseTypes = {
   sunSalutations: "sunSalutations",
@@ -68,17 +59,17 @@ function getPoses(count, poseType) {
   return selectedPoses;
 }
 
-function getYogaSequence({
-  totalSeconds,
-  poseDurationSeconds,
-  sunSalutationDurationSeconds,
+export function getYogaSequence({
+  totalSec,
+  poseDurationSec,
+  sunSalutationDurationSec,
 }) {
   // todo arm balances
 
   // One sun salutation for every 5 min,
   // but at least one and no more than 5
   const numSalutations = Math.min(
-    Math.max(Math.floor(totalSeconds / (5 * 60)), 1),
+    Math.max(Math.floor(totalSec / (5 * 60)), 1),
     5
   );
   const selectedSunSalutations = getPoses(
@@ -86,44 +77,45 @@ function getYogaSequence({
     PoseTypes.sunSalutations
   );
   const unseparatedSunSalutations = selectedSunSalutations.flatMap((i) => i);
-  const sunSalutationSeconds =
-    unseparatedSunSalutations.length * sunSalutationDurationSeconds;
+  const sunSalutationSec =
+    unseparatedSunSalutations.length * sunSalutationDurationSec;
 
   // 30 sec closing poses for every 5 min, up to 5 min max
-  const minClosingSeconds = Math.min((totalSeconds / (5 * 60)) * 30, 5 * 60);
+  const minClosingSec = Math.min((totalSec / (5 * 60)) * 30, 5 * 60);
 
   // 20 sec shavasana for every 5 min, up to 3 min max
-  const shavasanaSeconds = Math.min((totalSeconds / (5 * 60)) * 20, 3 * 60);
+  const shavasanaSec = Math.min((totalSec / (5 * 60)) * 20, 3 * 60);
 
   // Sets of standing poses fills the remaining time
-  const maxStandingSeconds =
-    totalSeconds - sunSalutationSeconds - minClosingSeconds - shavasanaSeconds;
+  const maxStandingSec =
+    totalSec - sunSalutationSec - minClosingSec - shavasanaSec;
   // todo handle case where this is <= 0?
 
   // A set consists of 5 poses, repeated twice
   // Calculate how much time a set will take based on how long each pose will last
   // todo handle case where not even time for one set
   const posesPerSet = 5;
-  const standingSeconds = posesPerSet * 2 * poseDurationSeconds;
-  const numSets = Math.floor(maxStandingSeconds / standingSeconds);
+  const standingSec = posesPerSet * 2 * poseDurationSec;
+  const numSets = Math.floor(maxStandingSec / standingSec);
   let standingSequence = [];
   for (let index = 0; index < numSets; index++) {
     let set = getPoses(posesPerSet, PoseTypes.standing);
     const setA = set.map((pose) => ({
-      pose,
+      ...pose,
       side: pose.bilateral ? "right" : "",
     }));
     const setB = set.map((pose) => ({
-      pose,
+      ...pose,
       side: pose.bilateral ? "left" : "",
     }));
     standingSequence = [...standingSequence, ...setA, ...setB];
   }
 
+  console.log(JSON.stringify(standingSequence))
   // Fill the remaining time with seated and reclining poses
-  const closingSeconds =
-    totalSeconds - sunSalutationSeconds - shavasanaSeconds - standingSeconds;
-  const numClosingPoses = Math.round(closingSeconds / poseDurationSeconds);
+  const closingSec =
+    totalSec - sunSalutationSec - shavasanaSec - standingSec;
+  const numClosingPoses = Math.round(closingSec / poseDurationSec);
   const numSeatedPoses = Math.floor(numClosingPoses);
   const numRecliningPoses = Math.ceil(numClosingPoses);
   const seatedPoses = getPoses(numSeatedPoses, PoseTypes.sitting);
@@ -131,18 +123,18 @@ function getYogaSequence({
 
   // Assemble the selected poses into a timed list
   let fullSequence = [];
-  let nextSecondsMark = 0;
+  let nextSecMark = 0;
 
   // Sun salutations
   for (let index = 0; index < unseparatedSunSalutations.length; index++) {
     fullSequence = [
       ...fullSequence,
       {
-        time: nextSecondsMark,
+        time: nextSecMark,
         pose: unseparatedSunSalutations[index],
       },
     ];
-    nextSecondsMark += sunSalutationDurationSeconds;
+    nextSecMark += sunSalutationDurationSec;
   }
 
   // Standing
@@ -150,11 +142,11 @@ function getYogaSequence({
     fullSequence = [
       ...fullSequence,
       {
-        time: nextSecondsMark,
+        time: nextSecMark,
         pose: standingSequence[index],
       },
     ];
-    nextSecondsMark += poseDurationSeconds;
+    nextSecMark += poseDurationSec;
   }
 
   // Seated
@@ -162,11 +154,11 @@ function getYogaSequence({
     fullSequence = [
       ...fullSequence,
       {
-        time: nextSecondsMark,
+        time: nextSecMark,
         pose: seatedPoses[index],
       },
     ];
-    nextSecondsMark += poseDurationSeconds;
+    nextSecMark += poseDurationSec;
   }
 
   // Reclining
@@ -174,18 +166,18 @@ function getYogaSequence({
     fullSequence = [
       ...fullSequence,
       {
-        time: nextSecondsMark,
+        time: nextSecMark,
         pose: recliningPoses[index],
       },
     ];
-    nextSecondsMark += poseDurationSeconds;
+    nextSecMark += poseDurationSec;
   }
 
   // Shavasana
   fullSequence = [
     ...fullSequence,
     {
-      time: nextSecondsMark,
+      time: nextSecMark,
       pose: {
         sanskrit: "Shavasana",
         english: "Corpse",
@@ -195,17 +187,10 @@ function getYogaSequence({
       },
     },
     {
-      time: nextSecondsMark + shavasanaSeconds,
+      time: nextSecMark + shavasanaSec,
       pose: undefined, //todo is this how to end? maybe namaste instead?
     },
   ];
 
-  console.log(JSON.stringify(fullSequence));
   return fullSequence;
 }
-
-getYogaSequence({
-  totalSeconds: 15 * 60,
-  poseDurationSeconds: 30,
-  sunSalutationDurationSeconds: 2,
-});
