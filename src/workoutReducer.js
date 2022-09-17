@@ -22,7 +22,7 @@ export default function workoutReducer(currentState, payload) {
     // then remove the next sequence info from the list and make that the current info
     if (newElapsedSec >= nextTime) {
       if (!currentState.muted) {
-        speak(`Next up: ${nextPose.english}`); // todo language
+        speak(`${nextPose.english}`); // todo language
       }
       return {
         ...currentState,
