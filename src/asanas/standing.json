@@ -126,6 +126,13 @@
     "bilateral": false
   },
   {
+    "sanskrit": "Ardha Uttanasana",
+    "english": "Standing Half Forward Bend",
+    "type": "Standing",
+    "spine": "Forward bend",
+    "bilateral": false
+  },
+  {
     "sanskrit": "Viparita Virabhadrasana",
     "english": "Reversed Warrior",
     "type": "Standing",
@@ -182,15 +189,8 @@
     "bilateral": false
   },
   {
-    "sanskrit": "",
+    "sanskrit": "Low lunge",
     "english": "Low lunge",
-    "type": "Standing",
-    "spine": "",
-    "bilateral": true
-  },
-  {
-    "sanskrit": "",
-    "english": "High lunge",
     "type": "Standing",
     "spine": "",
     "bilateral": true
@@ -302,7 +302,7 @@
   },
   {
     "sanskrit": "Prasarita Padottanasana C",
-    "english": "Wide leg Forward Bend, hands in shoulder clasp",
+    "english": "Wide leg Forward Bend, hands clasp behind back",
     "type": "Standing",
     "spine": "Forward bend",
     "bilateral": false

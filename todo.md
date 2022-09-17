@@ -1,4 +1,3 @@
-- sun salutations
 - show tick marks for class phase
 - new mascot
 - progress bar for single pose?

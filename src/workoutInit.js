@@ -25,7 +25,6 @@ export default function workoutInit({
     poseDurationSec: poseDurationSec,
     sunSalutationDurationSec: sunSalutationDurationSec,
   });
-  console.log(JSON.stringify(yogaSequence));
   return {
     yogaSequence: yogaSequence,
     totalSec: totalSec,

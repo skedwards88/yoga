@@ -79,5 +79,370 @@
       "spine": "",
       "bilateral": false
     }
+  ],
+  [
+    {
+      "sanskrit": "Pranamasana",
+      "english": "Prayer",
+      "type": "Standing",
+      "spine": "",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Urdhva Hastasana",
+      "english": "Standing arms overhead",
+      "type": "Standing",
+      "spine": "",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Uttanasana",
+      "english": "Standing Forward Bend",
+      "type": "Standing",
+      "spine": "Forward bend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Ardha Uttanasana",
+      "english": "Standing Half Forward Bend",
+      "type": "Standing",
+      "spine": "Forward bend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Chaturanga Dandasana",
+      "english": "Low Plank",
+      "type": "Reclining",
+      "spine": "",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Urdhva Mukha Shvanasana",
+      "english": "Upward-Facing Dog",
+      "type": "Reclining",
+      "spine": "Backbend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Adho Mukha Shvanasana",
+      "english": "Downward-Facing Dog",
+      "type": "Standing",
+      "spine": "Forward bend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Ardha Uttanasana",
+      "english": "Standing Half Forward Bend",
+      "type": "Standing",
+      "spine": "Forward bend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Uttanasana",
+      "english": "Standing Forward Bend",
+      "type": "Standing",
+      "spine": "Forward bend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Urdhva Hastasana",
+      "english": "Standing arms overhead",
+      "type": "Standing",
+      "spine": "",
+      "bilateral": false
+    }
+  ],
+  [
+    {
+      "sanskrit": "Pranamasana",
+      "english": "Prayer",
+      "type": "Standing",
+      "spine": "",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Utkatasana",
+      "english": "Chair",
+      "type": "Standing",
+      "spine": "",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Uttanasana",
+      "english": "Standing Forward Bend",
+      "type": "Standing",
+      "spine": "Forward bend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Ardha Uttanasana",
+      "english": "Standing Half Forward Bend",
+      "type": "Standing",
+      "spine": "Forward bend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Chaturanga Dandasana",
+      "english": "Low Plank",
+      "type": "Reclining",
+      "spine": "",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Urdhva Mukha Shvanasana",
+      "english": "Upward-Facing Dog",
+      "type": "Reclining",
+      "spine": "Backbend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Adho Mukha Shvanasana",
+      "english": "Downward-Facing Dog",
+      "type": "Standing",
+      "spine": "Forward bend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Virabhadrasana I",
+      "english": "Warrior I",
+      "type": "Standing",
+      "spine": "",
+      "bilateral": true,
+      "side": "right"
+    },
+    {
+      "sanskrit": "Chaturanga Dandasana",
+      "english": "Low Plank",
+      "type": "Reclining",
+      "spine": "",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Urdhva Mukha Shvanasana",
+      "english": "Upward-Facing Dog",
+      "type": "Reclining",
+      "spine": "Backbend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Adho Mukha Shvanasana",
+      "english": "Downward-Facing Dog",
+      "type": "Standing",
+      "spine": "Forward bend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Virabhadrasana I",
+      "english": "Warrior I",
+      "type": "Standing",
+      "spine": "",
+      "bilateral": true,
+      "side": "left"
+    },
+    {
+      "sanskrit": "Chaturanga Dandasana",
+      "english": "Low Plank",
+      "type": "Reclining",
+      "spine": "",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Urdhva Mukha Shvanasana",
+      "english": "Upward-Facing Dog",
+      "type": "Reclining",
+      "spine": "Backbend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Adho Mukha Shvanasana",
+      "english": "Downward-Facing Dog",
+      "type": "Standing",
+      "spine": "Forward bend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Ardha Uttanasana",
+      "english": "Standing Half Forward Bend",
+      "type": "Standing",
+      "spine": "Forward bend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Uttanasana",
+      "english": "Standing Forward Bend",
+      "type": "Standing",
+      "spine": "Forward bend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Utkatasana",
+      "english": "Chair",
+      "type": "Standing",
+      "spine": "",
+      "bilateral": false
+    }
+  ],
+  [
+    {
+      "sanskrit": "Pranamasana",
+      "english": "Prayer",
+      "type": "Standing",
+      "spine": "",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Urdhva Hastasana",
+      "english": "Standing arms overhead",
+      "type": "Standing",
+      "spine": "",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Uttanasana C",
+      "english": "Standing Forward Bend, hands clasp behind back",
+      "type": "Standing",
+      "spine": "Forward bend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Low lunge",
+      "english": "Low lunge",
+      "type": "Standing",
+      "spine": "",
+      "bilateral": true
+    },
+    {
+      "sanskrit": "Adho Mukha Shvanasana",
+      "english": "Downward-Facing Dog",
+      "type": "Standing",
+      "spine": "Forward bend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "High Plank",
+      "english": "High Plank",
+      "type": "Reclining",
+      "spine": "",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Ashtanga Namaskara",
+      "english": "Knees, chest, chin",
+      "type": "Reclining",
+      "spine": "",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Urdhva Mukha Shvanasana",
+      "english": "Upward-Facing Dog",
+      "type": "Reclining",
+      "spine": "Backbend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Adho Mukha Shvanasana",
+      "english": "Downward-Facing Dog",
+      "type": "Standing",
+      "spine": "Forward bend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Low lunge",
+      "english": "Low lunge",
+      "type": "Standing",
+      "spine": "",
+      "bilateral": true
+    },
+    {
+      "sanskrit": "Uttanasana C",
+      "english": "Standing Forward Bend, hands clasp behind back",
+      "type": "Standing",
+      "spine": "Forward bend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Urdhva Hastasana",
+      "english": "Standing arms overhead",
+      "type": "Standing",
+      "spine": "",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Urdhva Hastasana",
+      "english": "Standing arms overhead",
+      "type": "Standing",
+      "spine": "",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Uttanasana C",
+      "english": "Standing Forward Bend, hands clasp behind back",
+      "type": "Standing",
+      "spine": "Forward bend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Low lunge",
+      "english": "Low lunge",
+      "type": "Standing",
+      "spine": "",
+      "bilateral": true
+    },
+    {
+      "sanskrit": "Adho Mukha Shvanasana",
+      "english": "Downward-Facing Dog",
+      "type": "Standing",
+      "spine": "Forward bend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "High Plank",
+      "english": "High Plank",
+      "type": "Reclining",
+      "spine": "",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Ashtanga Namaskara",
+      "english": "Knees, chest, chin",
+      "type": "Reclining",
+      "spine": "",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Urdhva Mukha Shvanasana",
+      "english": "Upward-Facing Dog",
+      "type": "Reclining",
+      "spine": "Backbend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Adho Mukha Shvanasana",
+      "english": "Downward-Facing Dog",
+      "type": "Standing",
+      "spine": "Forward bend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Low lunge",
+      "english": "Low lunge",
+      "type": "Standing",
+      "spine": "",
+      "bilateral": true
+    },
+    {
+      "sanskrit": "Uttanasana C",
+      "english": "Standing Forward Bend, hands clasp behind back",
+      "type": "Standing",
+      "spine": "Forward bend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "Urdhva Hastasana",
+      "english": "Standing arms overhead",
+      "type": "Standing",
+      "spine": "",
+      "bilateral": false
+    }
   ]
 ]
