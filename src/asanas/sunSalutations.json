@@ -309,7 +309,8 @@
       "english": "Low lunge",
       "type": "Standing",
       "spine": "",
-      "bilateral": true
+      "bilateral": true,
+      "side": "right"
     },
     {
       "sanskrit": "Adho Mukha Shvanasana",
@@ -351,7 +352,8 @@
       "english": "Low lunge",
       "type": "Standing",
       "spine": "",
-      "bilateral": true
+      "bilateral": true,
+      "side": "left"
     },
     {
       "sanskrit": "Uttanasana C",
@@ -386,7 +388,8 @@
       "english": "Low lunge",
       "type": "Standing",
       "spine": "",
-      "bilateral": true
+      "bilateral": true,
+      "side": "left"
     },
     {
       "sanskrit": "Adho Mukha Shvanasana",
@@ -428,7 +431,8 @@
       "english": "Low lunge",
       "type": "Standing",
       "spine": "",
-      "bilateral": true
+      "bilateral": true,
+      "side": "right"
     },
     {
       "sanskrit": "Uttanasana C",
