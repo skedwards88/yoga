@@ -1,24 +1,23 @@
 import React from "react";
 import { Statuses } from "./statuses";
 
-const TimeSettings = ["countUp","countDown","noTime"];
+const TimeSettings = ["countUp", "countDown", "noTime"];
 
-function Time({elapsedSec, totalSec, timeSetting}) {
-
+function Time({ elapsedSec, totalSec, timeSetting }) {
   if (TimeSettings[timeSetting] === "noTime") {
-    return <></>
+    return <></>;
   }
 
   if (TimeSettings[timeSetting] === "countUp") {
-    const min = Math.floor(elapsedSec / 60)
+    const min = Math.floor(elapsedSec / 60);
     const sec = elapsedSec % 60;
-    return <div id="time">{`${min}:${sec < 10 ? "0" : ""}${sec}`}</div>
+    return <div id="time">{`${min}:${sec < 10 ? "0" : ""}${sec}`}</div>;
   }
 
   if (TimeSettings[timeSetting] === "countDown") {
     const min = Math.floor((totalSec - elapsedSec) / 60);
     const sec = (totalSec - elapsedSec) % 60;
-    return <div id="time">{`${min}:${sec < 10 ? "0" : ""}${sec}`}</div>
+    return <div id="time">{`${min}:${sec < 10 ? "0" : ""}${sec}`}</div>;
   }
 }
 
@@ -95,12 +94,16 @@ export default function Workout({
         <div>{currentPoseInfo.sanskrit}</div>
         <div>{currentPoseInfo.side ? `${currentPoseInfo.side} side` : ""}</div>
       </div>
-      <Time elapsedSec={workoutState.elapsedSec} totalSec={workoutState.totalSec} timeSetting={timeSetting}></Time>
+      <Time
+        elapsedSec={workoutState.elapsedSec}
+        totalSec={workoutState.totalSec}
+        timeSetting={timeSetting}
+      ></Time>
 
       <div className="progress-group">
         <ProgressBar
           progressColor="purple"
-          progressWidth={((elapsedPose ) / (totalPose - 1)) * 100}
+          progressWidth={(elapsedPose / (totalPose - 1)) * 100}
         ></ProgressBar>
       </div>
 
@@ -141,8 +144,12 @@ export default function Workout({
         <button
           id="timeButton"
           className={TimeSettings[(timeSetting + 1) % TimeSettings.length]}
-          onClick={() => setTimeSetting((timeSetting + 1) % TimeSettings.length)}
-        >{timeSetting}</button>
+          onClick={() =>
+            setTimeSetting((timeSetting + 1) % TimeSettings.length)
+          }
+        >
+          {timeSetting}
+        </button>
         <button
           id="settingsButton"
           onClick={() => setShowSettings(true)}

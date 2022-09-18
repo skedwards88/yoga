@@ -19,7 +19,13 @@ export default function workoutReducer(currentState, payload) {
     // If the new time is >= the next time in the sequence, then move to the next pose
     if (newElapsedSec >= nextTime) {
       if (!currentState.muted) {
-        speak(`${yogaSequence[currentPoseIndex + 1].pose.english}`); // todo language
+        speak(
+          `${yogaSequence[currentPoseIndex + 1].pose.english}${
+            yogaSequence[currentPoseIndex + 1].pose.side
+              ? `${yogaSequence[currentPoseIndex + 1].pose.side} side`
+              : ""
+          }`
+        ); // todo language
       }
       return {
         ...currentState,
