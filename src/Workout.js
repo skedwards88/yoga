@@ -1,7 +1,16 @@
 import React from "react";
 import { Statuses } from "./statuses";
 
-function ProgressBar({ progressWidth, progressColor }) {
+function ProgressBar({ progressWidth, progressColor, tickMarks = [] }) {
+  const ticks = tickMarks.map((tick, i) => (
+    <div
+      key={i}
+      className="progressTick"
+      style={{
+        width: `${tick}%`,
+      }}
+    ></div>
+  ));
   return (
     <div className="progressBar">
       <div
@@ -11,6 +20,7 @@ function ProgressBar({ progressWidth, progressColor }) {
           backgroundColor: progressColor,
         }}
       ></div>
+      {ticks}
     </div>
   );
 }
@@ -34,43 +44,56 @@ export default function Workout({
     return () => clearInterval(timerID);
   }, [workoutState.status]);
 
-  // time elapsed within the current intermission+interval
-  //   const baseSec =
-  //     workoutState.elapsedSec %
-  //     (workoutState.intervalSec + workoutState.intermissionSec);
+  const currentPoseIndex = workoutState.currentPoseIndex;
+  const elapsedPose =
+    workoutState.elapsedSec - workoutState.yogaSequence[currentPoseIndex].time;
+  const totalPose =
+    workoutState.yogaSequence[currentPoseIndex + 1].time -
+    workoutState.yogaSequence[currentPoseIndex].time; // todo will fail on last
+  const currentPoseInfo = workoutState.yogaSequence[currentPoseIndex].pose;
 
-  //   const progressWidth = ((baseSec - workoutState.intermissionSec + 1) /
-  //   workoutState.intervalSec) *
-  // 100;
-  //   const progressSec = baseSec - workoutState.intermissionSec + 1;;
+  let prevType = workoutState.yogaSequence[0].type;
+  let ticks = [];
+  for (let index = 0; index < workoutState.yogaSequence.length; index++) {
+    const type = workoutState.yogaSequence[index].type;
+    if (type !== prevType) {
+      // todo total sec is not actually total sec...? use actual total sec instead
+      const newTick =
+        (workoutState.yogaSequence[index].time / workoutState.totalSec) * 100;
+      console.log(
+        `adding ${newTick} for ${workoutState.yogaSequence[index].time} when ${type}`
+      );
+      ticks = [...ticks, newTick];
+      prevType = type;
+    }
+  }
+
+  console.log(JSON.stringify(ticks));
 
   return (
     <div id="workout">
       <div id="exercise_info">
-        <div>{workoutState.currentPose.english}</div>
-        <div>{workoutState.currentPose.sanskrit}</div>
-        <div>
-          {workoutState.currentPose.side
-            ? `${workoutState.currentPose.side} side`
-            : ""}
-        </div>
+        <div>{currentPoseInfo.english}</div>
+        <div>{currentPoseInfo.sanskrit}</div>
+        <div>{currentPoseInfo.side ? `${currentPoseInfo.side} side` : ""}</div>
       </div>
 
-      {/* <div className="progress-group">
-        <div className="progress-label">{progressSec}</div>
+      <div className="progress-group">
+        <div className="progress-label">{elapsedPose}</div>
         <ProgressBar
-          progressColor="green"
-          progressWidth={progressWidth}
+          progressColor="purple"
+          progressWidth={((elapsedPose + 1) / totalPose) * 100}
         ></ProgressBar>
-      </div> */}
+      </div>
 
       <div className="progress-group">
         {/* todo change to show min:sec. also make option to hide time? <div className="progress-label">{`${currentInterval} / ${totalIntervals}`}</div> */}
         <ProgressBar
-          progressColor="green"
+          progressColor="purple"
           progressWidth={
             100 * (workoutState.elapsedSec / workoutState.totalSec)
           }
+          tickMarks={ticks}
         ></ProgressBar>
       </div>
 

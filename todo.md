@@ -1,4 +1,3 @@
-- show tick marks for class phase
 - new mascot
 - progress bar for single pose?
 - show time remaining for pose?

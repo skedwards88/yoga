@@ -33,12 +33,6 @@ export default function workoutInit({
     elapsedSec: 0,
     status: startWorkout ? Statuses.paused : Statuses.notStarted, //todo can derive this from the time list...but do need to know whether running or paused
     muted: muted,
-    currentPose: {
-      sanskrit: "Tadasana",
-      english: "Mountain",
-      type: "Standing",
-      spine: "",
-      bilateral: false,
-    },
+    currentPoseIndex: 0,
   };
 }

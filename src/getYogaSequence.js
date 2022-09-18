@@ -64,6 +64,9 @@ export function getYogaSequence({
   poseDurationSec,
   sunSalutationDurationSec,
 }) {
+  console.log(
+    `input: totalSec ${totalSec} poseDurationSec ${poseDurationSec} sunSalutationDurationSec ${sunSalutationDurationSec}`
+  );
   // todo arm balances
 
   // One sun salutation for every 5 min,
@@ -79,7 +82,8 @@ export function getYogaSequence({
   const unseparatedSunSalutations = selectedSunSalutations.flatMap((i) => i);
   const sunSalutationSec =
     unseparatedSunSalutations.length * sunSalutationDurationSec;
-
+  console.log(`numSalutations ${numSalutations}`);
+  console.log(`sunSalutationSec: ${sunSalutationSec}`);
   // 30 sec closing poses for every 5 min, up to 5 min max
   const minClosingSec = Math.min((totalSec / (5 * 60)) * 30, 5 * 60);
 
@@ -90,13 +94,14 @@ export function getYogaSequence({
   const maxStandingSec =
     totalSec - sunSalutationSec - minClosingSec - shavasanaSec;
   // todo handle case where this is <= 0?
-
+  console.log(`maxStandingSec ${maxStandingSec}`);
   // A set consists of 5 poses, repeated twice
   // Calculate how much time a set will take based on how long each pose will last
   // todo handle case where not even time for one set
   const posesPerSet = 5;
-  const standingSec = posesPerSet * 2 * poseDurationSec;
-  const numSets = Math.floor(maxStandingSec / standingSec);
+  const standingSecPerSet = posesPerSet * 2 * poseDurationSec;
+  const numSets = Math.floor(maxStandingSec / standingSecPerSet);
+  console.log(`numSets ${numSets}`);
   let standingSequence = [];
   for (let index = 0; index < numSets; index++) {
     let set = getPoses(posesPerSet, PoseTypes.standing);
@@ -111,15 +116,27 @@ export function getYogaSequence({
     standingSequence = [...standingSequence, ...setA, ...setB];
   }
 
-  console.log(JSON.stringify(standingSequence));
+  console.log(
+    `act standingSequence time: ${standingSequence.length * poseDurationSec}`
+  );
+
   // Fill the remaining time with seated and reclining poses
-  const closingSec = totalSec - sunSalutationSec - shavasanaSec - standingSec;
+  const closingSec =
+    totalSec -
+    sunSalutationSec -
+    shavasanaSec -
+    standingSequence.length * poseDurationSec;
+  console.log(`shavasanaSec ${shavasanaSec}`);
+  console.log(`closingSec ${closingSec}`);
   const numClosingPoses = Math.round(closingSec / poseDurationSec);
-  const numSeatedPoses = Math.floor(numClosingPoses);
-  const numRecliningPoses = Math.ceil(numClosingPoses);
+  const numSeatedPoses = Math.floor(numClosingPoses / 2);
+  const numRecliningPoses = Math.ceil(numClosingPoses / 2);
   const seatedPoses = getPoses(numSeatedPoses, PoseTypes.sitting);
   const recliningPoses = getPoses(numRecliningPoses, PoseTypes.reclining);
-
+  console.log(
+    `act seated sec: ${numClosingPoses} => ${numSeatedPoses * poseDurationSec}`
+  );
+  console.log(`act reclining sec ${numRecliningPoses * poseDurationSec}`);
   // Assemble the selected poses into a timed list
   let fullSequence = [];
   let nextSecMark = 0;
@@ -131,6 +148,7 @@ export function getYogaSequence({
       {
         time: nextSecMark,
         pose: unseparatedSunSalutations[index],
+        type: PoseTypes.sunSalutations,
       },
     ];
     nextSecMark += sunSalutationDurationSec;
@@ -143,6 +161,7 @@ export function getYogaSequence({
       {
         time: nextSecMark,
         pose: standingSequence[index],
+        type: PoseTypes.standing,
       },
     ];
     nextSecMark += poseDurationSec;
@@ -155,6 +174,7 @@ export function getYogaSequence({
       {
         time: nextSecMark,
         pose: seatedPoses[index],
+        type: PoseTypes.sitting,
       },
     ];
     nextSecMark += poseDurationSec;
@@ -167,6 +187,7 @@ export function getYogaSequence({
       {
         time: nextSecMark,
         pose: recliningPoses[index],
+        type: PoseTypes.reclining,
       },
     ];
     nextSecMark += poseDurationSec;
@@ -184,10 +205,18 @@ export function getYogaSequence({
         spine: "",
         bilateral: false,
       },
+      type: "shavasana",
     },
     {
       time: nextSecMark + shavasanaSec,
-      pose: undefined, //todo is this how to end? maybe namaste instead?
+      pose: {
+        sanskrit: "Namaste",
+        english: "Gratitude",
+        type: "Reclining",
+        spine: "",
+        bilateral: false,
+      }, //todo is this how to end? maybe namaste instead?
+      type: "shavasana",
     },
   ];
 

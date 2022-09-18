@@ -10,25 +10,21 @@ export default function workoutReducer(currentState, payload) {
   } else if (payload.action === "unmute") {
     return { ...currentState, muted: false };
   } else if (payload.action === "increment") {
-    let yogaSequence = JSON.parse(JSON.stringify(currentState.yogaSequence));
-    const nextTime = yogaSequence[0].time;
-    const nextPose = yogaSequence[0].pose;
-    console.log(`NEXT TIME ${nextTime}`);
-    console.log(JSON.stringify(nextPose));
+    const yogaSequence = currentState.yogaSequence;
+    const currentPoseIndex = currentState.currentPoseIndex;
+    const nextTime = yogaSequence[currentPoseIndex + 1]?.time;
 
     // Increase the time by 1 second
     const newElapsedSec = currentState.elapsedSec + 1;
-    // If the new time is >= the next time in the sequence
-    // then remove the next sequence info from the list and make that the current info
+    // If the new time is >= the next time in the sequence, then move to the next pose
     if (newElapsedSec >= nextTime) {
       if (!currentState.muted) {
-        speak(`${nextPose.english}`); // todo language
+        speak(`${yogaSequence[currentPoseIndex + 1].pose.english}`); // todo language
       }
       return {
         ...currentState,
         elapsedSec: newElapsedSec,
-        currentPose: nextPose,
-        yogaSequence: yogaSequence.slice(1, yogaSequence.length),
+        currentPoseIndex: currentState.currentPoseIndex + 1,
       };
     } else {
       return {

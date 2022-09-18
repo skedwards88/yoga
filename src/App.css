@@ -162,11 +162,24 @@ input[type="checkbox" i]:checked {
   width: 100%;
   background-color: rgb(170, 161, 161);
   border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
 .progress {
-  height: 5vh;
   border-radius: 5px;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.progressTick {
+  width: 50%;
+  border-style: solid;
+  border-color: black;
+  border-width: 0 3px 0 0;
+  grid-area: 1 / 1 / 2 / 2;
 }
 
 .progress-group {
