@@ -27,9 +27,8 @@ export default function Settings({
   }
 
   return (
-    <div id="settings">
-      <form onSubmit={(event) => handleNewWorkout(event)}>
-        <div>
+    <form id="settings" onSubmit={(event) => handleNewWorkout(event)}>
+        <div >
           <div className="setting">
             <label htmlFor="totalSec">Total (min)</label>
             <select id="totalSec" defaultValue={workoutState.totalSec}>
@@ -82,6 +81,5 @@ export default function Settings({
           </button>
         </div>
       </form>
-    </div>
   );
 }

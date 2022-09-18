@@ -148,7 +148,6 @@ export default function Workout({
             setTimeSetting((timeSetting + 1) % TimeSettings.length)
           }
         >
-          {timeSetting}
         </button>
         <button
           id="settingsButton"
