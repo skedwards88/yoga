@@ -1,6 +1,27 @@
 import React from "react";
 import { Statuses } from "./statuses";
 
+const TimeSettings = ["countUp","countDown","noTime"];
+
+function Time({elapsedSec, totalSec, timeSetting}) {
+
+  if (TimeSettings[timeSetting] === "noTime") {
+    return <></>
+  }
+
+  if (TimeSettings[timeSetting] === "countUp") {
+    const min = Math.floor(elapsedSec / 60)
+    const sec = elapsedSec % 60;
+    return <div id="time">{`${min}:${sec < 10 ? "0" : ""}${sec}`}</div>
+  }
+
+  if (TimeSettings[timeSetting] === "countDown") {
+    const min = Math.floor((totalSec - elapsedSec) / 60);
+    const sec = (totalSec - elapsedSec) % 60;
+    return <div id="time">{`${min}:${sec < 10 ? "0" : ""}${sec}`}</div>
+  }
+}
+
 function ProgressBar({ progressWidth, progressColor, tickMarks = [] }) {
   const ticks = tickMarks.map((tick, i) => (
     <div
@@ -30,6 +51,8 @@ export default function Workout({
   dispatchWorkoutState,
   workoutState,
 }) {
+  const [timeSetting, setTimeSetting] = React.useState(0);
+
   React.useEffect(() => {
     let timerID;
     if (
@@ -60,15 +83,10 @@ export default function Workout({
       // todo total sec is not actually total sec...? use actual total sec instead
       const newTick =
         (workoutState.yogaSequence[index].time / workoutState.totalSec) * 100;
-      console.log(
-        `adding ${newTick} for ${workoutState.yogaSequence[index].time} when ${type}`
-      );
       ticks = [...ticks, newTick];
       prevType = type;
     }
   }
-
-  console.log(JSON.stringify(ticks));
 
   return (
     <div id="workout">
@@ -77,12 +95,12 @@ export default function Workout({
         <div>{currentPoseInfo.sanskrit}</div>
         <div>{currentPoseInfo.side ? `${currentPoseInfo.side} side` : ""}</div>
       </div>
+      <Time elapsedSec={workoutState.elapsedSec} totalSec={workoutState.totalSec} timeSetting={timeSetting}></Time>
 
       <div className="progress-group">
-        <div className="progress-label">{elapsedPose}</div>
         <ProgressBar
           progressColor="purple"
-          progressWidth={((elapsedPose + 1) / totalPose) * 100}
+          progressWidth={((elapsedPose ) / (totalPose - 1)) * 100}
         ></ProgressBar>
       </div>
 
@@ -120,6 +138,11 @@ export default function Workout({
             onClick={() => dispatchWorkoutState({ action: "mute" })}
           ></button>
         )}
+        <button
+          id="timeButton"
+          className={TimeSettings[(timeSetting + 1) % TimeSettings.length]}
+          onClick={() => setTimeSetting((timeSetting + 1) % TimeSettings.length)}
+        >{timeSetting}</button>
         <button
           id="settingsButton"
           onClick={() => setShowSettings(true)}
