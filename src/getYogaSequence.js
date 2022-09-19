@@ -218,17 +218,6 @@ export function getYogaSequence({
       },
       type: "shavasana",
     },
-    {
-      time: nextSecMark + shavasanaSec,
-      pose: {
-        sanskrit: "Namaste",
-        english: "Gratitude",
-        type: "Reclining",
-        spine: "",
-        bilateral: false,
-      }, //todo is this how to end? maybe namaste instead?
-      type: "shavasana",
-    },
   ];
 
   return fullSequence;

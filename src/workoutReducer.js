@@ -16,13 +16,26 @@ export default function workoutReducer(currentState, payload) {
 
     // Increase the time by 1 second
     const newElapsedSec = currentState.elapsedSec + 1;
+    
+    // If over
+    if (newElapsedSec >= currentState.totalSec) {
+      if (!currentState.muted) {
+        speak("Namaste");
+      }
+      return {
+        ...currentState,
+        elapsedSec: newElapsedSec,
+        status: Statuses.complete,
+      };
+    }
+
     // If the new time is >= the next time in the sequence, then move to the next pose
     if (newElapsedSec >= nextTime) {
       if (!currentState.muted) {
         speak(
           `${yogaSequence[currentPoseIndex + 1].pose.english}${
             yogaSequence[currentPoseIndex + 1].pose.side
-              ? `${yogaSequence[currentPoseIndex + 1].pose.side} side`
+              ? `. ${yogaSequence[currentPoseIndex + 1].pose.side} side`
               : ""
           }`
         ); // todo language

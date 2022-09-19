@@ -10,7 +10,7 @@
   "theme_color": "#d9a4eb",
   "icons": [
     {
-      "src": "favicon.svg",
+      "src": "icon.svg",
       "type": "image/svg+xml",
       "sizes": "720x720"
     },
@@ -28,12 +28,6 @@
     {
       "src": "maskable_icon_512.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "maskable_icon_1024.png",
-      "sizes": "1024x1024",
       "type": "image/png",
       "purpose": "maskable"
     }

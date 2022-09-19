@@ -18,12 +18,10 @@ module.exports = (env, argv) => {
 
   const copyPlugin = new CopyPlugin({
     patterns: [
-      { from: "./src/images/icon.svg", to: "./assets/favicon.svg" },
-      { from: "./src/images/icon.ico", to: "./assets/favicon.ico" },
-      { from: "./src/images/icon.png", to: "./assets/icon_720.png" },
+      { from: "./src/images/icon.svg", to: "./assets/icon.svg" },
+      { from: "./src/images/icon_720.png", to: "./assets/icon_720.png" },
       { from: "./src/images/maskable_icon_192.png", to: "./assets/maskable_icon_192.png" },
       { from: "./src/images/maskable_icon_512.png", to: "./assets/maskable_icon_512.png" },
-      { from: "./src/images/maskable_icon_1024.png", to: "./assets/maskable_icon_1024.png" },
       { from: "./src/manifest.json", to: "./assets/manifest.json" },
     ],
     options: {
