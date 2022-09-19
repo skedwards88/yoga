@@ -21,7 +21,7 @@ function Time({ elapsedSec, totalSec, timeSetting }) {
   }
 }
 
-function ProgressBar({ progressWidth, progressColor, tickMarks = [] }) {
+function ProgressBar({ progressWidth, tickMarks = [] }) {
   const ticks = tickMarks.map((tick, i) => (
     <div
       key={i}
@@ -37,7 +37,6 @@ function ProgressBar({ progressWidth, progressColor, tickMarks = [] }) {
         className="progress"
         style={{
           width: `${progressWidth}%`,
-          backgroundColor: progressColor,
         }}
       ></div>
       {ticks}
@@ -102,7 +101,6 @@ export default function Workout({
 
       <div className="progress-group">
         <ProgressBar
-          progressColor="purple"
           progressWidth={(elapsedPose / (totalPose - 1)) * 100}
         ></ProgressBar>
       </div>
@@ -110,7 +108,6 @@ export default function Workout({
       <div className="progress-group">
         {/* todo change to show min:sec. also make option to hide time? <div className="progress-label">{`${currentInterval} / ${totalIntervals}`}</div> */}
         <ProgressBar
-          progressColor="purple"
           progressWidth={
             100 * (workoutState.elapsedSec / workoutState.totalSec)
           }
