@@ -68,9 +68,12 @@ export default function Workout({
   const currentPoseIndex = workoutState.currentPoseIndex;
   const elapsedPose =
     workoutState.elapsedSec - workoutState.yogaSequence[currentPoseIndex].time;
+    // the pose duration is either the diff between the start time of this pose and the next
+    // or, if this is the last pose, the diff between it and the total time
   const totalPose =
-    workoutState.yogaSequence[currentPoseIndex + 1].time -
-    workoutState.yogaSequence[currentPoseIndex].time; // todo will fail on last
+    workoutState.yogaSequence[currentPoseIndex + 1]?.time -
+      workoutState.yogaSequence[currentPoseIndex].time ||
+    workoutState.totalSec - workoutState.yogaSequence[currentPoseIndex].time;
   const currentPoseInfo = workoutState.yogaSequence[currentPoseIndex].pose;
 
   let prevType = workoutState.yogaSequence[0].type;
@@ -144,8 +147,7 @@ export default function Workout({
           onClick={() =>
             setTimeSetting((timeSetting + 1) % TimeSettings.length)
           }
-        >
-        </button>
+        ></button>
         <button
           id="settingsButton"
           onClick={() => setShowSettings(true)}
