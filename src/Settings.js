@@ -34,6 +34,7 @@ export default function Settings({
             <select id="totalSec" defaultValue={workoutState.totalSec}>
               <option value={5 * 60}>5</option>
               <option value={10 * 60}>10</option>
+              <option value={15 * 60}>15</option>
               <option value={20 * 60}>20</option>
               <option value={30 * 60}>30</option>
               <option value={45 * 60}>45</option>
