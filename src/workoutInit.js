@@ -13,9 +13,9 @@ export default function workoutInit({
     ? JSON.parse(localStorage.getItem("workoutState"))
     : undefined;
   totalSec = totalSec || savedState?.totalSec || 600;
-  poseDurationSec = poseDurationSec || savedState?.poseDurationSec || 30;
+  poseDurationSec = poseDurationSec || savedState?.poseDurationSec || 20;
   sunSalutationDurationSec =
-    sunSalutationDurationSec || savedState?.sunSalutationDurationSec || 3;
+    sunSalutationDurationSec || savedState?.sunSalutationDurationSec || 4;
   console.log(`muted input was ${muted}`);
   console.log(JSON.stringify(muted));
   muted = muted ?? savedState?.muted ?? false;
