@@ -1,4 +1,5 @@
 import React from "react";
+import { PoseTypes } from "./PoseTypes";
 
 export default function Settings({
   setShowSettings,
@@ -16,11 +17,20 @@ export default function Settings({
       event.target.elements.sunSalutationDurationSec.value
     );
 
+    const newIncludeSunSalutations = event.target.elements[PoseTypes.sunSalutations].checked;
+    const newIncludeStanding = event.target.elements[PoseTypes.standing].checked;
+    const newIncludeFloor = event.target.elements[PoseTypes.allFloor].checked;
+    const newIncludeShavasana= event.target.elements[PoseTypes.shavasana].checked;
+
     dispatchWorkoutState({
       action: "newWorkout",
       totalSec: newTotalSec,
       poseDurationSec: newPoseDurationSec,
       sunSalutationDurationSec: newSunSalutationDurationSec,
+      includeSunSalutations: newIncludeSunSalutations,
+      includeStanding: newIncludeStanding,
+      includeFloor: newIncludeFloor,
+      includeShavasana: newIncludeShavasana,
     });
 
     setShowSettings(false);
@@ -74,6 +84,46 @@ export default function Settings({
               <option value={10}>10</option>
             </select>
           </div>
+
+          <div className="setting-group">
+            <div className="setting">
+              <label htmlFor={PoseTypes.sunSalutations}>Sun salutations</label>
+              <input
+                id={PoseTypes.sunSalutations}
+                type="checkbox"
+                defaultChecked={workoutState.includeSunSalutations}
+              />
+            </div>
+
+            <div className="setting">
+              <label htmlFor={PoseTypes.standing}>Standing</label>
+              <input
+                id={PoseTypes.standing}
+                type="checkbox"
+                defaultChecked={workoutState.includeStanding}
+              />
+            </div>
+
+            <div className="setting">
+              <label htmlFor={PoseTypes.allFloor}>Floor</label>
+              <input
+                id={PoseTypes.allFloor}
+                type="checkbox"
+                defaultChecked={workoutState.includeFloor}
+              />
+            </div>
+
+            <div className="setting">
+              <label htmlFor={PoseTypes.shavasana}>Shavasana</label>
+              <input
+                id={PoseTypes.shavasana}
+                type="checkbox"
+                defaultChecked={workoutState.includeShavasana}
+              />
+            </div>
+
+          </div>
+
         </div>
         <div className="button-group">
           <button type="submit">Start</button>

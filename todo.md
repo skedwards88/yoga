@@ -1,5 +1,5 @@
-- new mascot
 - make buttons higher on page for ios bar?
 - add language option
 - make screen not fall asleep
 - arm balances
+- make option to skip sun salutations (maybe true for all cats?)

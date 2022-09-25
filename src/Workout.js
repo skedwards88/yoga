@@ -49,6 +49,7 @@ export default function Workout({
   dispatchWorkoutState,
   workoutState,
 }) {
+  console.log(JSON.stringify(workoutState))
   const [timeSetting, setTimeSetting] = React.useState(0);
 
   React.useEffect(() => {
@@ -109,7 +110,6 @@ export default function Workout({
       </div>
 
       <div className="progress-group">
-        {/* todo change to show min:sec. also make option to hide time? <div className="progress-label">{`${currentInterval} / ${totalIntervals}`}</div> */}
         <ProgressBar
           progressWidth={
             100 * (workoutState.elapsedSec / workoutState.totalSec)

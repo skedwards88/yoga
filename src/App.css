@@ -118,12 +118,12 @@ input[type="checkbox" i] {
   height: 5vmin;
   border-radius: 5px;
   background-color: transparent;
-  border: 2px solid black;
+  border: 3px solid white;
   margin: 0;
 }
 
 input[type="checkbox" i]:checked {
-  background-color: black;
+  background-color: purple;
 }
 
 #home {
@@ -159,8 +159,9 @@ input[type="checkbox" i]:checked {
   flex-direction: column;
   justify-content: space-between;
   text-align: left;
-  border: 2px solid black;
+  border: 3px solid white;
   margin: 3px;
+  border-radius: 5px;
 }
 
 #workout {
