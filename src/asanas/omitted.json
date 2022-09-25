@@ -1,0 +1,165 @@
+[
+  {
+    "sanskrit": "Bhairavasana",
+    "english": "Formidable",
+    "type": "Reclining",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Bhekasana",
+    "english": "Frog",
+    "type": "Reclining",
+    "spine": "Backbend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Shavasana",
+    "english": "Corpse",
+    "type": "Reclining",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Viparita Dandasana",
+    "english": "Inverted Staff",
+    "type": "Reclining",
+    "spine": "Backbend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Durvasasana",
+    "english": "Standing leg behind head",
+    "type": "Standing",
+    "spine": "",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Svarga Dvijasana",
+    "english": "Bird of Paradise",
+    "type": "Standing",
+    "spine": "",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Parivritta Svarga Dvijasana",
+    "english": "Revolved Bird of Paradise",
+    "type": "Standing",
+    "spine": "",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Prasarita Padottanasana B",
+    "english": "Wide leg Forward Bend, hands to hips",
+    "type": "Standing",
+    "spine": "Forward bend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Prasarita Padottanasana C",
+    "english": "Wide leg Forward Bend, hands clasp behind back",
+    "type": "Standing",
+    "spine": "Forward bend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Prasarita Padottanasana D",
+    "english": "Wide leg Forward Bend, hands to toes",
+    "type": "Standing",
+    "spine": "Forward bend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Tadasana",
+    "english": "Mountain",
+    "type": "Standing",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Pranamasana",
+    "english": "Prayer",
+    "type": "Standing",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Urdhva Hastasana",
+    "english": "Standing arms overhead",
+    "type": "Standing",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Uttanasana",
+    "english": "Standing Forward Bend",
+    "type": "Standing",
+    "spine": "Forward bend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Ardha Uttanasana",
+    "english": "Standing Half Forward Bend",
+    "type": "Standing",
+    "spine": "Forward bend",
+    "bilateral": false
+  },
+
+  {
+    "sanskrit": "Adho Mukha Shvanasana",
+    "english": "Downward-Facing Dog",
+    "type": "Standing",
+    "spine": "Forward bend",
+    "bilateral": false
+  },
+
+  {
+    "sanskrit": "Kurmasana",
+    "english": "Tortoise",
+    "type": "Sitting",
+    "spine": "Forward bend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Mandukasana",
+    "english": "Frog",
+    "type": "Sitting",
+    "spine": "",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Bharadvajasana",
+    "english": "Bharadwaja's twist",
+    "type": "Sitting",
+    "spine": "Twist",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Padmasana",
+    "english": "Lotus",
+    "type": "Sitting",
+    "spine": "",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Samakonasana",
+    "english": "Side splits",
+    "type": "Sitting",
+    "spine": "",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Rajakapotasana",
+    "english": "King Pigeon",
+    "type": "Sitting",
+    "spine": "Backbend",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Virasana",
+    "english": "Hero",
+    "type": "Sitting",
+    "spine": "",
+    "bilateral": false
+  }
+]

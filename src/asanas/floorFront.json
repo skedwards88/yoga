@@ -1,0 +1,114 @@
+[
+  {
+    "sanskrit": "Ashtanga Namaskara",
+    "english": "Knees, chest, chin",
+    "type": "Reclining",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Bhujangasana",
+    "english": "Cobra",
+    "type": "Reclining",
+    "spine": "Backbend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "",
+    "english": "Sphinx",
+    "type": "Reclining",
+    "spine": "Backbend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Chaturanga Dandasana",
+    "english": "Low Plank",
+    "type": "Reclining",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "High Plank",
+    "english": "High Plank",
+    "type": "Reclining",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Dhanurasana",
+    "english": "Bow",
+    "type": "Reclining",
+    "spine": "Backbend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Ardha Dhanurasana",
+    "english": "Half Bow",
+    "type": "Reclining",
+    "spine": "Backbend",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Makarasana",
+    "english": "Crocodile",
+    "type": "Reclining",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Shalabhasana",
+    "english": "Locust",
+    "type": "Reclining",
+    "spine": "Backbend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Urdhva Mukha Shvanasana",
+    "english": "Upward-Facing Dog",
+    "type": "Reclining",
+    "spine": "Backbend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Shashankasana",
+    "english": "Rabbit",
+    "type": "Reclining",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Uttana Shishosana",
+    "english": "Puppy",
+    "type": "Standing",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Bidalasana",
+    "english": "Cat",
+    "type": "Standing",
+    "spine": "Backbend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Bitilasana",
+    "english": "Cow",
+    "type": "Standing",
+    "spine": "Forward bend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "",
+    "english": "Dolphin",
+    "type": "Standing",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Balasana",
+    "english": "Child's pose",
+    "type": "Sitting",
+    "spine": "",
+    "bilateral": false
+  }
+]

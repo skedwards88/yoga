@@ -13,20 +13,7 @@
     "spine": "",
     "bilateral": false
   },
-  {
-    "sanskrit": "Balasana",
-    "english": "Child's pose",
-    "type": "Sitting",
-    "spine": "",
-    "bilateral": false
-  },
-  {
-    "sanskrit": "Bharadvajasana",
-    "english": "Bharadwaja's twist",
-    "type": "Sitting",
-    "spine": "Twist",
-    "bilateral": true
-  },
+
   {
     "sanskrit": "Dandasana",
     "english": "Staff",
@@ -50,7 +37,7 @@
   },
   {
     "sanskrit": "Hanumanasana",
-    "english": "Hanuman's Pose",
+    "english": "Splits",
     "type": "Sitting",
     "spine": "",
     "bilateral": true
@@ -64,35 +51,22 @@
   },
   {
     "sanskrit": "Kraunchasana",
-    "english": "Heron",
+    "english": "Bound boat",
     "type": "Sitting",
     "spine": "",
     "bilateral": true
   },
-  {
-    "sanskrit": "Kurmasana",
-    "english": "Tortoise",
-    "type": "Sitting",
-    "spine": "Forward bend",
-    "bilateral": false
-  },
-  {
-    "sanskrit": "Mandukasana]]",
-    "english": "Frog",
-    "type": "Sitting",
-    "spine": "",
-    "bilateral": true
-  },
+
   {
     "sanskrit": "Marichyasana",
-    "english": "Marichi's Pose",
+    "english": "Bound knee forward fold",
     "type": "Sitting",
     "spine": "Twist",
     "bilateral": true
   },
   {
     "sanskrit": "Matsyendrasana",
-    "english": "Lord of the Fishes",
+    "english": "Seated twist",
     "type": "Sitting",
     "spine": "Twist",
     "bilateral": false
@@ -104,13 +78,7 @@
     "spine": "Forward bend",
     "bilateral": false
   },
-  {
-    "sanskrit": "Padmasana",
-    "english": "Lotus",
-    "type": "Sitting",
-    "spine": "",
-    "bilateral": true
-  },
+
   {
     "sanskrit": "Paschimottanasana",
     "english": "Seated Forward Bend",
@@ -118,20 +86,7 @@
     "spine": "Forward bend",
     "bilateral": true
   },
-  {
-    "sanskrit": "Rajakapotasana",
-    "english": "King Pigeon",
-    "type": "Sitting",
-    "spine": "Backbend",
-    "bilateral": true
-  },
-  {
-    "sanskrit": "Samakonasana",
-    "english": "Side splits",
-    "type": "Sitting",
-    "spine": "",
-    "bilateral": true
-  },
+
   {
     "sanskrit": "Sukhasana",
     "english": "Easy",
@@ -181,13 +136,7 @@
     "spine": "",
     "bilateral": false
   },
-  {
-    "sanskrit": "Virasana",
-    "english": "Hero",
-    "type": "Sitting",
-    "spine": "",
-    "bilateral": false
-  },
+
   {
     "sanskrit": "Padangushthasana",
     "english": "Toe Stand",

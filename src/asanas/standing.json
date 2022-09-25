@@ -1,12 +1,5 @@
 [
   {
-    "sanskrit": "Adho Mukha Shvanasana",
-    "english": "Downward-Facing Dog",
-    "type": "Standing",
-    "spine": "Forward bend",
-    "bilateral": false
-  },
-  {
     "sanskrit": "Anjaneyasana",
     "english": "Crescent Moon",
     "type": "Standing",
@@ -16,27 +9,6 @@
   {
     "sanskrit": "Ardha Chandrasana",
     "english": "Half moon",
-    "type": "Standing",
-    "spine": "",
-    "bilateral": true
-  },
-  {
-    "sanskrit": "Bidalasana",
-    "english": "Cat",
-    "type": "Standing",
-    "spine": "Backbend",
-    "bilateral": false
-  },
-  {
-    "sanskrit": "Bitilasana",
-    "english": "Cow",
-    "type": "Standing",
-    "spine": "Forward bend",
-    "bilateral": false
-  },
-  {
-    "sanskrit": "Durvasasana",
-    "english": "Standing leg behind head",
     "type": "Standing",
     "spine": "",
     "bilateral": true
@@ -77,27 +49,6 @@
     "bilateral": true
   },
   {
-    "sanskrit": "Tadasana",
-    "english": "Mountain",
-    "type": "Standing",
-    "spine": "",
-    "bilateral": false
-  },
-  {
-    "sanskrit": "Pranamasana",
-    "english": "Prayer",
-    "type": "Standing",
-    "spine": "",
-    "bilateral": false
-  },
-  {
-    "sanskrit": "Urdhva Hastasana",
-    "english": "Standing arms overhead",
-    "type": "Standing",
-    "spine": "",
-    "bilateral": false
-  },
-  {
     "sanskrit": "Trikonasana",
     "english": "Triangle",
     "type": "Standing",
@@ -117,20 +68,6 @@
     "type": "Standing",
     "spine": "",
     "bilateral": true
-  },
-  {
-    "sanskrit": "Uttanasana",
-    "english": "Standing Forward Bend",
-    "type": "Standing",
-    "spine": "Forward bend",
-    "bilateral": false
-  },
-  {
-    "sanskrit": "Ardha Uttanasana",
-    "english": "Standing Half Forward Bend",
-    "type": "Standing",
-    "spine": "Forward bend",
-    "bilateral": false
   },
   {
     "sanskrit": "Viparita Virabhadrasana",
@@ -175,20 +112,6 @@
     "bilateral": false
   },
   {
-    "sanskrit": "Uttana Shishosana",
-    "english": "Puppy",
-    "type": "Standing",
-    "spine": "",
-    "bilateral": false
-  },
-  {
-    "sanskrit": "",
-    "english": "Dolphin",
-    "type": "Standing",
-    "spine": "",
-    "bilateral": false
-  },
-  {
     "sanskrit": "Low lunge",
     "english": "Low lunge",
     "type": "Standing",
@@ -215,20 +138,6 @@
     "type": "Standing",
     "spine": "",
     "bilateral": false
-  },
-  {
-    "sanskrit": "Svarga Dvijasana",
-    "english": "Bird of Paradise",
-    "type": "Standing",
-    "spine": "",
-    "bilateral": true
-  },
-  {
-    "sanskrit": "Parivritta Svarga Dvijasana",
-    "english": "Revolved Bird of Paradise",
-    "type": "Standing",
-    "spine": "",
-    "bilateral": true
   },
   {
     "sanskrit": "Ashta Chandrasana",
@@ -294,31 +203,17 @@
     "bilateral": false
   },
   {
-    "sanskrit": "Prasarita Padottanasana B",
-    "english": "Wide leg Forward Bend, hands to hips",
-    "type": "Standing",
-    "spine": "Forward bend",
-    "bilateral": false
-  },
-  {
-    "sanskrit": "Prasarita Padottanasana C",
-    "english": "Wide leg Forward Bend, hands clasp behind back",
-    "type": "Standing",
-    "spine": "Forward bend",
-    "bilateral": false
-  },
-  {
-    "sanskrit": "Prasarita Padottanasana D",
-    "english": "Wide leg Forward Bend, hands to toes",
-    "type": "Standing",
-    "spine": "Forward bend",
-    "bilateral": false
-  },
-  {
     "sanskrit": "Uttana Pristhasana",
     "english": "Lizard",
     "type": "Standing",
     "spine": "",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Camatkarasana",
+    "english": "Wild thing",
+    "type": "Reclining",
+    "spine": "Backbend",
     "bilateral": true
   }
 ]
