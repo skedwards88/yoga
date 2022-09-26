@@ -16,7 +16,7 @@ export default function workoutReducer(currentState, payload) {
 
     // Increase the time by 1 second
     const newElapsedSec = currentState.elapsedSec + 1;
-    
+
     // If over
     if (newElapsedSec >= currentState.totalSec) {
       if (!currentState.muted) {

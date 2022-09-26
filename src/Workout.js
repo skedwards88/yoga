@@ -49,7 +49,6 @@ export default function Workout({
   dispatchWorkoutState,
   workoutState,
 }) {
-  console.log(JSON.stringify(workoutState))
   const [timeSetting, setTimeSetting] = React.useState(0);
 
   React.useEffect(() => {
@@ -69,8 +68,8 @@ export default function Workout({
   const currentPoseIndex = workoutState.currentPoseIndex;
   const elapsedPose =
     workoutState.elapsedSec - workoutState.yogaSequence[currentPoseIndex].time;
-    // the pose duration is either the diff between the start time of this pose and the next
-    // or, if this is the last pose, the diff between it and the total time
+  // the pose duration is either the diff between the start time of this pose and the next
+  // or, if this is the last pose, the diff between it and the total time
   const totalPose =
     workoutState.yogaSequence[currentPoseIndex + 1]?.time -
       workoutState.yogaSequence[currentPoseIndex].time ||

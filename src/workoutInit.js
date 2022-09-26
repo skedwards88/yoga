@@ -7,14 +7,10 @@ export default function workoutInit({
   sunSalutationDurationSec,
   startWorkout,
   muted,
-  includeSunSalutations,
-  includeStanding,
-  includeFloor,
+  numSunSalutations,
   includeShavasana,
   useSaved = true,
 }) {
-
-  console.log(`initial includeSunSalutations ${includeSunSalutations}`)
   const savedState = useSaved
     ? JSON.parse(localStorage.getItem("workoutState"))
     : undefined;
@@ -23,23 +19,16 @@ export default function workoutInit({
   poseDurationSec = poseDurationSec || savedState?.poseDurationSec || 20;
   sunSalutationDurationSec =
     sunSalutationDurationSec || savedState?.sunSalutationDurationSec || 4;
-  console.log(`muted input was ${muted}`);
-  console.log(JSON.stringify(muted));
   muted = muted ?? savedState?.muted ?? false;
-  includeSunSalutations = includeSunSalutations ?? savedState?.includeSunSalutations ?? true;
-  includeStanding = includeStanding ?? savedState?.includeStanding ?? true;
-  includeFloor = includeFloor ?? savedState?.includeFloor ?? true;
+  numSunSalutations =
+    numSunSalutations ?? savedState?.numSunSalutations ?? "auto";
   includeShavasana = includeShavasana ?? savedState?.includeShavasana ?? true;
-
-  console.log(`resolved includeSunSalutations ${includeSunSalutations}`)
 
   const yogaSequence = getYogaSequence({
     totalSec: totalSec,
     poseDurationSec: poseDurationSec,
     sunSalutationDurationSec: sunSalutationDurationSec,
-    includeSunSalutations: includeSunSalutations,
-    includeStanding: includeStanding,
-    includeFloor: includeFloor,
+    numSunSalutations: numSunSalutations,
     includeShavasana: includeShavasana,
   });
 
@@ -52,9 +41,7 @@ export default function workoutInit({
     status: startWorkout ? Statuses.paused : Statuses.notStarted, //todo can derive this from the time list...but do need to know whether running or paused
     muted: muted,
     currentPoseIndex: 0,
-    includeSunSalutations: includeSunSalutations,
-    includeStanding: includeStanding,
-    includeFloor: includeFloor,
+    numSunSalutations: numSunSalutations,
     includeShavasana: includeShavasana,
   };
 }
