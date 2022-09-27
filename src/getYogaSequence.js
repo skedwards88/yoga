@@ -142,13 +142,12 @@ export function getYogaSequence({
   const sunSalutationSec = sunSalutations.length * sunSalutationDurationSec;
 
   // 20 sec shavasana for every 5 min, up to 3 min max
-  // todo handle case of minimal selection
   const shavasanaSec = includeShavasana
     ? Math.min((totalSec / (5 * 60)) * 20, 3 * 60)
     : 0;
 
-  // 30 sec closing poses for every 5 min, up to 5 min max
-  const minFloorSec = Math.min((totalSec / (5 * 60)) * 30, 5 * 60);
+  // 20% of time is closing poses
+  const minFloorSec = Math.floor(totalSec * 0.2);
 
   // Sets of standing poses fills the remaining time
   // todo handle case where this is <= 0?
