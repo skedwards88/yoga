@@ -2,3 +2,4 @@
 - add language option
 - make screen not fall asleep
 - arm balances
+- saved settings not respected?
