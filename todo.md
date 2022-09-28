@@ -2,4 +2,3 @@
 - add language option
 - make screen not fall asleep
 - arm balances
-- make option to skip sun salutations (maybe true for all cats?)

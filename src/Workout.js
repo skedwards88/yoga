@@ -51,6 +51,46 @@ export default function Workout({
 }) {
   const [timeSetting, setTimeSetting] = React.useState(0);
 
+  const wakeLock = React.useRef(null);
+
+  const getWakeLock = React.useCallback(async () => {
+    console.log(`getting wakeLock`);
+    if (!("wakeLock" in navigator)) {
+      console.log("wakeLock not supported");
+      return;
+    }
+    try {
+      wakeLock.current = await navigator.wakeLock.request("screen");
+      console.log(`2. wakeLock is ${wakeLock}`);
+
+      wakeLock.current.addEventListener("release", () => {
+        console.log("Screen Wake Lock released:");
+      });
+    } catch (err) {
+      console.error(`${err.name}, ${err.message}`);
+    }
+  });
+
+  const releaseWakeLock = React.useCallback(async () => {
+    console.log("releasing wakeLock");
+    if (!("wakeLock" in navigator && wakeLock.current)) {
+      console.log("no wakeLock to release");
+      return;
+    }
+    await wakeLock.current.release();
+  });
+
+  React.useEffect(() => {
+    if (
+      workoutState.status === Statuses.running &&
+      workoutState.elapsedSec < workoutState.totalSec
+    ) {
+      getWakeLock();
+    } else {
+      releaseWakeLock();
+    }
+  }, [workoutState.status]);
+
   React.useEffect(() => {
     let timerID;
     if (
@@ -64,6 +104,22 @@ export default function Workout({
     }
     return () => clearInterval(timerID);
   }, [workoutState.status]);
+
+  function handleVisibilityChange() {
+    // Pause the timer if the page is hidden
+    if (
+      (document.hidden || document.msHidden || document.webkitHidden) &&
+      workoutState.status === Statuses.running
+    ) {
+      dispatchWorkoutState({ action: "pause" });
+    }
+  }
+
+  React.useEffect(() => {
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () =>
+      removeEventListener("visibilitychange", handleVisibilityChange);
+  });
 
   const currentPoseIndex = workoutState.currentPoseIndex;
   const elapsedPose =
