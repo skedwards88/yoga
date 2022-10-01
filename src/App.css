@@ -124,6 +124,11 @@ input[type="checkbox" i] {
 
 input[type="checkbox" i]:checked {
   background-color: purple;
+  background-image: url("./images/checkmark.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
 }
 
 #home {
