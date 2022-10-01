@@ -156,6 +156,13 @@
     "bilateral": true
   },
   {
+    "sanskrit": "Chaturanga Dandasana",
+    "english": "Low Plank",
+    "type": "Reclining",
+    "spine": "",
+    "bilateral": false
+  },
+  {
     "sanskrit": "Virasana",
     "english": "Hero",
     "type": "Sitting",

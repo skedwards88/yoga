@@ -69,7 +69,7 @@
     "english": "Seated twist",
     "type": "Sitting",
     "spine": "Twist",
-    "bilateral": false
+    "bilateral": true
   },
   {
     "sanskrit": "Navasana",

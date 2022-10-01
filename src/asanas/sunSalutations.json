@@ -27,13 +27,20 @@
       "type": "Standing",
       "spine": "Backbend",
       "bilateral": true,
-      "side": "right"
+      "side": "first"
     },
     {
       "sanskrit": "Adho Mukha Shvanasana",
       "english": "Downward-Facing Dog",
       "type": "Standing",
       "spine": "Forward bend",
+      "bilateral": false
+    },
+    {
+      "sanskrit": "High Plank",
+      "english": "High Plank",
+      "type": "Reclining",
+      "spine": "",
       "bilateral": false
     },
     {
@@ -63,7 +70,7 @@
       "type": "Standing",
       "spine": "Backbend",
       "bilateral": true,
-      "side": "left"
+      "side": "second"
     },
     {
       "sanskrit": "Uttanasana",
@@ -208,7 +215,7 @@
       "type": "Standing",
       "spine": "",
       "bilateral": true,
-      "side": "right"
+      "side": "first"
     },
     {
       "sanskrit": "Chaturanga Dandasana",
@@ -237,7 +244,7 @@
       "type": "Standing",
       "spine": "",
       "bilateral": true,
-      "side": "left"
+      "side": "second"
     },
     {
       "sanskrit": "Chaturanga Dandasana",
@@ -310,7 +317,7 @@
       "type": "Standing",
       "spine": "",
       "bilateral": true,
-      "side": "right"
+      "side": "first"
     },
     {
       "sanskrit": "Adho Mukha Shvanasana",
@@ -353,7 +360,7 @@
       "type": "Standing",
       "spine": "",
       "bilateral": true,
-      "side": "left"
+      "side": "second"
     },
     {
       "sanskrit": "Uttanasana C",
@@ -382,7 +389,7 @@
       "type": "Standing",
       "spine": "",
       "bilateral": true,
-      "side": "left"
+      "side": "second"
     },
     {
       "sanskrit": "Adho Mukha Shvanasana",
@@ -425,7 +432,7 @@
       "type": "Standing",
       "spine": "",
       "bilateral": true,
-      "side": "right"
+      "side": "first"
     },
     {
       "sanskrit": "Uttanasana C",

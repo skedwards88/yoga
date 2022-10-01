@@ -65,8 +65,8 @@ function getPoses({ count, poseType, matchSides = false }) {
     if (matchSides && pose.bilateral) {
       selectedPoses = [
         ...selectedPoses,
-        { ...pose, side: "right" },
-        { ...pose, side: "left" },
+        { ...pose, side: "first" },
+        { ...pose, side: "second" },
       ];
       index++;
     } else {
@@ -114,16 +114,22 @@ function getStandingPoses(maxSec, poseDurationSec) {
 
   // divide the poses into sets of 5 (or as close as possible)
   const posesPerSet = 5;
-  const partitionedPoses = partitionArray(poses, posesPerSet);
+  let partitionedPoses = partitionArray(poses, posesPerSet);
+  // If the last set of poses is only one pose, omit it
+  partitionedPoses =
+    partitionedPoses[partitionedPoses.length - 1].length === 1
+      ? partitionedPoses.slice(0, partitionedPoses.length - 1)
+      : partitionedPoses;
+
   let standingSequence = [];
   for (let setIndex = 0; setIndex < partitionedPoses.length; setIndex++) {
     const setA = partitionedPoses[setIndex].map((pose) => ({
       ...pose,
-      side: pose.bilateral ? "right" : "",
+      side: pose.bilateral ? "first" : "",
     }));
     const setB = partitionedPoses[setIndex].map((pose) => ({
       ...pose,
-      side: pose.bilateral ? "left" : "",
+      side: pose.bilateral ? "second" : "",
     }));
     standingSequence = [...standingSequence, ...setA, ...setB];
   }
