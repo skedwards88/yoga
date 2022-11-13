@@ -212,8 +212,22 @@
   {
     "sanskrit": "Camatkarasana",
     "english": "Wild thing",
-    "type": "Reclining",
+    "type": "Standing",
     "spine": "Backbend",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Baddha Virabhadrasana",
+    "english": "Humble warrior",
+    "type": "Standing",
+    "spine": "",
+    "bilateral": true
+  },
+  {
+    "sanskrit": "Skandasana",
+    "english": "Side lunge",
+    "type": "Standing",
+    "spine": "",
     "bilateral": true
   }
 ]
