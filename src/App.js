@@ -17,7 +17,7 @@ function App() {
   );
 
   React.useEffect(() => {
-    window.localStorage.setItem("workoutState", JSON.stringify(workoutState));
+    window.localStorage.setItem("yogaBotState", JSON.stringify(workoutState));
   }, [workoutState]);
 
   const wakeLock = React.useRef(null);

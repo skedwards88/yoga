@@ -12,7 +12,7 @@ export default function workoutInit({
   useSaved = true,
 }) {
   const savedState = useSaved
-    ? JSON.parse(localStorage.getItem("workoutState"))
+    ? JSON.parse(localStorage.getItem("yogaBotState"))
     : undefined;
 
   totalSec = totalSec || savedState?.totalSec || 600;
