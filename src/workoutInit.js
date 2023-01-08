@@ -9,7 +9,7 @@ export default function workoutInit({
   muted,
   numSunSalutations,
   includeShavasana,
-  includeVinyasanas,
+  includeVinyasas,
   useSaved = true,
 }) {
   const savedState = useSaved
@@ -24,8 +24,8 @@ export default function workoutInit({
   numSunSalutations =
     numSunSalutations ?? savedState?.numSunSalutations ?? "auto";
   includeShavasana = includeShavasana ?? savedState?.includeShavasana ?? true;
-  includeVinyasanas =
-    includeVinyasanas ?? savedState?.includeVinyasanas ?? true;
+  includeVinyasas =
+    includeVinyasas ?? savedState?.includeVinyasas ?? true;
 
   const yogaSequence = getYogaSequence({
     totalSec: totalSec,
@@ -33,7 +33,7 @@ export default function workoutInit({
     sunSalutationDurationSec: sunSalutationDurationSec,
     numSunSalutations: numSunSalutations,
     includeShavasana: includeShavasana,
-    includeVinyasanas: includeVinyasanas,
+    includeVinyasas: includeVinyasas,
   });
 
   const actualTotalSec = yogaSequence.reduce((accumulated, nextPose) => accumulated + nextPose.duration, 0)
@@ -49,7 +49,7 @@ export default function workoutInit({
     currentPoseIndex: 0,
     numSunSalutations: numSunSalutations,
     includeShavasana: includeShavasana,
-    includeVinyasanas: includeVinyasanas,
+    includeVinyasas: includeVinyasas,
     elapsedTimeInPrevPoses: 0,
   };
 }

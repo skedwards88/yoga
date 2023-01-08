@@ -1,5 +1,5 @@
 import allSunSalutations from "./asanas/sunSalutations.json";
-import vinyasanaPoses from "./asanas/vinyasana.json";
+import vinyasaPoses from "./asanas/vinyasa.json";
 import allStandingPoses from "./asanas/standing.json";
 import allSittingPoses from "./asanas/sitting.json";
 import allFloorFrontPoses from "./asanas/floorFront.json";
@@ -145,7 +145,7 @@ export function getYogaSequence({
   sunSalutationDurationSec,
   numSunSalutations,
   includeShavasana = true,
-  includeVinyasanas = true,
+  includeVinyasas = true,
 }) {
   const sunSalutations = getSunSalutations(numSunSalutations, totalSec);
   const sunSalutationSec = sunSalutations.length * sunSalutationDurationSec;
@@ -214,20 +214,20 @@ export function getYogaSequence({
         duration: poseDurationSec,
       },
     ];
-    // If at end of set (index 9 multiple) or last index, insert vinyasana if requested
+    // If at end of set (index 9 multiple) or last index, insert vinyasa if requested
     if (
-      includeVinyasanas &&
+      includeVinyasas &&
       (index % 10 === 9 || index === standingSequence.length - 1)
     ) {
       for (
-        let vinyasanaIndex = 0;
-        vinyasanaIndex < vinyasanaPoses.length;
-        vinyasanaIndex++
+        let vinyasaIndex = 0;
+        vinyasaIndex < vinyasaPoses.length;
+        vinyasaIndex++
       ) {
         fullSequence = [
           ...fullSequence,
           {
-            pose: vinyasanaPoses[vinyasanaIndex],
+            pose: vinyasaPoses[vinyasaIndex],
             type: PoseTypes.standing,
             duration: sunSalutationDurationSec,
           },
