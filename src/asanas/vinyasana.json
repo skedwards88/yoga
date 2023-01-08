@@ -1,0 +1,37 @@
+[
+  {
+    "sanskrit": "Adho Mukha Shvanasana",
+    "english": "Downward-Facing Dog",
+    "type": "Standing",
+    "spine": "Forward bend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "High Plank",
+    "english": "High Plank",
+    "type": "Reclining",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Chaturanga Dandasana",
+    "english": "Low Plank",
+    "type": "Reclining",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Urdhva Mukha Shvanasana",
+    "english": "Upward-Facing Dog",
+    "type": "Reclining",
+    "spine": "Backbend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Adho Mukha Shvanasana",
+    "english": "Downward-Facing Dog",
+    "type": "Standing",
+    "spine": "Forward bend",
+    "bilateral": false
+  }
+]

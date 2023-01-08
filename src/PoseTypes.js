@@ -6,5 +6,6 @@ export const PoseTypes = {
   reclining: "reclining",
   armBalance: "armBalance",
   shavasana: "shavasana",
+  vinyasanas: "vinyasanas",
   allFloor: "allFloor",
 };

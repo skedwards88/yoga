@@ -9,6 +9,7 @@ export default function workoutInit({
   muted,
   numSunSalutations,
   includeShavasana,
+  includeVinyasanas,
   useSaved = true,
 }) {
   const savedState = useSaved
@@ -23,6 +24,8 @@ export default function workoutInit({
   numSunSalutations =
     numSunSalutations ?? savedState?.numSunSalutations ?? "auto";
   includeShavasana = includeShavasana ?? savedState?.includeShavasana ?? true;
+  includeVinyasanas =
+    includeVinyasanas ?? savedState?.includeVinyasanas ?? true;
 
   const yogaSequence = getYogaSequence({
     totalSec: totalSec,
@@ -30,18 +33,23 @@ export default function workoutInit({
     sunSalutationDurationSec: sunSalutationDurationSec,
     numSunSalutations: numSunSalutations,
     includeShavasana: includeShavasana,
+    includeVinyasanas: includeVinyasanas,
   });
+
+  const actualTotalSec = yogaSequence.reduce((accumulated, nextPose) => accumulated + nextPose.duration, 0)
 
   return {
     yogaSequence: yogaSequence,
-    totalSec: totalSec,
+    totalSec: actualTotalSec,
     poseDurationSec: poseDurationSec,
     sunSalutationDurationSec: sunSalutationDurationSec,
     elapsedSec: 0,
-    status: startWorkout ? Statuses.paused : Statuses.notStarted, //todo can derive this from the time list...but do need to know whether running or paused
+    status: startWorkout ? Statuses.paused : Statuses.notStarted,
     muted: muted,
     currentPoseIndex: 0,
     numSunSalutations: numSunSalutations,
     includeShavasana: includeShavasana,
+    includeVinyasanas: includeVinyasanas,
+    elapsedTimeInPrevPoses: 0,
   };
 }
