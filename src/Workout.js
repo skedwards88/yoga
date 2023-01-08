@@ -82,27 +82,23 @@ export default function Workout({
   });
 
   const currentPoseIndex = workoutState.currentPoseIndex;
-  const elapsedPose =
-    workoutState.elapsedSec - workoutState.yogaSequence[currentPoseIndex].time;
-  // the pose duration is either the diff between the start time of this pose and the next
-  // or, if this is the last pose, the diff between it and the total time
-  const totalPose =
-    workoutState.yogaSequence[currentPoseIndex + 1]?.time -
-      workoutState.yogaSequence[currentPoseIndex].time ||
-    workoutState.totalSec - workoutState.yogaSequence[currentPoseIndex].time;
+  const elapsedTimeInCurrentPose = workoutState.elapsedSec - workoutState.elapsedTimeInPrevPoses
+  const totalPoseDuration = workoutState.yogaSequence[currentPoseIndex]?.duration;
   const currentPoseInfo = workoutState.yogaSequence[currentPoseIndex].pose;
 
   let prevType = workoutState.yogaSequence[0].type;
   let ticks = [];
+  let timeAccumulator = 0
   for (let index = 0; index < workoutState.yogaSequence.length; index++) {
     const type = workoutState.yogaSequence[index].type;
+    const duration = workoutState.yogaSequence[index].duration;
     if (type !== prevType) {
-      // todo total sec is not actually total sec...? use actual total sec instead
       const newTick =
-        (workoutState.yogaSequence[index].time / workoutState.totalSec) * 100;
+      (timeAccumulator / workoutState.totalSec) * 100;
       ticks = [...ticks, newTick];
       prevType = type;
     }
+    timeAccumulator += duration
   }
 
   return (
@@ -120,7 +116,7 @@ export default function Workout({
 
       <div className="progress-group">
         <ProgressBar
-          progressWidth={(elapsedPose / (totalPose - 1)) * 100}
+          progressWidth={(elapsedTimeInCurrentPose / (totalPoseDuration - 1)) * 100}
         ></ProgressBar>
       </div>
 

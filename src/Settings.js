@@ -25,6 +25,9 @@ export default function Settings({
     const newIncludeShavasana =
       event.target.elements[PoseTypes.shavasana].checked;
 
+    const newIncludeVinyasas =
+      event.target.elements[PoseTypes.vinyasas].checked;
+
     dispatchWorkoutState({
       action: "newWorkout",
       totalSec: newTotalSec,
@@ -32,6 +35,7 @@ export default function Settings({
       sunSalutationDurationSec: newSunSalutationDurationSec,
       numSunSalutations: newNumSunSalutations,
       includeShavasana: newIncludeShavasana,
+      includeVinyasas: newIncludeVinyasas,
     });
 
     setShowSettings(false);
@@ -110,6 +114,14 @@ export default function Settings({
             id={PoseTypes.shavasana}
             type="checkbox"
             defaultChecked={workoutState.includeShavasana}
+          />
+        </div>
+        <div className="setting">
+          <label htmlFor={PoseTypes.vinyasas}>Include vinyasas</label>
+          <input
+            id={PoseTypes.vinyasas}
+            type="checkbox"
+            defaultChecked={workoutState.includeVinyasas}
           />
         </div>
       </div>

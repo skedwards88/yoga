@@ -1,4 +1,5 @@
 import allSunSalutations from "./asanas/sunSalutations.json";
+import vinyasaPoses from "./asanas/vinyasa.json";
 import allStandingPoses from "./asanas/standing.json";
 import allSittingPoses from "./asanas/sitting.json";
 import allFloorFrontPoses from "./asanas/floorFront.json";
@@ -35,7 +36,7 @@ function getPoses({ count, poseType, matchSides = false }) {
       break;
 
     default: // todo error?
-      console.log("Pose type not found");
+      console.error("Pose type not found");
       allPoses = [
         ...allStandingPoses,
         ...allSittingPoses,
@@ -79,8 +80,6 @@ function getPoses({ count, poseType, matchSides = false }) {
 function getSunSalutations(numSunSalutations, totalClassSec) {
   // One sun salutation for every 5 min,
   // but at least one and no more than 5
-  // todo handle case of minimal selection
-
   if (numSunSalutations === "auto") {
     numSunSalutations = Math.min(
       Math.max(Math.floor(totalClassSec / (5 * 60)), 1),
@@ -108,8 +107,11 @@ function getStandingPoses(maxSec, poseDurationSec) {
   }
 
   // figure out how many poses we have time for, divided by 2 since we will repeat
-  // todo handle cases where not even time for one?
   const numPoses = Math.floor(maxSec / poseDurationSec / 2);
+
+  // if we don't really have time for any poses, return early
+  if (numPoses < 2) return []
+
   const poses = getPoses({ count: numPoses, poseType: PoseTypes.standing });
 
   // divide the poses into sets of 5 (or as close as possible)
@@ -143,6 +145,7 @@ export function getYogaSequence({
   sunSalutationDurationSec,
   numSunSalutations,
   includeShavasana = true,
+  includeVinyasas = true,
 }) {
   const sunSalutations = getSunSalutations(numSunSalutations, totalSec);
   const sunSalutationSec = sunSalutations.length * sunSalutationDurationSec;
@@ -156,11 +159,9 @@ export function getYogaSequence({
   const minFloorSec = Math.floor(totalSec * 0.2);
 
   // Sets of standing poses fills the remaining time
-  // todo handle case where this is <= 0?
-  const maxStandingSec =
-    totalSec - sunSalutationSec - minFloorSec - shavasanaSec;
+  const maxStandingSec = Math.max(0, totalSec - sunSalutationSec - minFloorSec - shavasanaSec);
 
-  const standingSequence = getStandingPoses(maxStandingSec, poseDurationSec);
+  const standingSequence = maxStandingSec > 0 ? getStandingPoses(maxStandingSec, poseDurationSec) : [];
 
   // Fill the remaining time with floor poses (seated, floor front, reclining)
   const floorSec =
@@ -190,19 +191,17 @@ export function getYogaSequence({
 
   // Assemble the selected poses into a timed list
   let fullSequence = [];
-  let nextSecMark = 0;
 
   // Sun salutations
   for (let index = 0; index < sunSalutations.length; index++) {
     fullSequence = [
       ...fullSequence,
       {
-        time: nextSecMark,
         pose: sunSalutations[index],
         type: PoseTypes.sunSalutations,
+        duration: sunSalutationDurationSec,
       },
     ];
-    nextSecMark += sunSalutationDurationSec;
   }
 
   // Standing
@@ -210,12 +209,31 @@ export function getYogaSequence({
     fullSequence = [
       ...fullSequence,
       {
-        time: nextSecMark,
         pose: standingSequence[index],
         type: PoseTypes.standing,
+        duration: poseDurationSec,
       },
     ];
-    nextSecMark += poseDurationSec;
+    // If at end of set (index 9 multiple) or last index, insert vinyasa if requested
+    if (
+      includeVinyasas &&
+      (index % 10 === 9 || index === standingSequence.length - 1)
+    ) {
+      for (
+        let vinyasaIndex = 0;
+        vinyasaIndex < vinyasaPoses.length;
+        vinyasaIndex++
+      ) {
+        fullSequence = [
+          ...fullSequence,
+          {
+            pose: vinyasaPoses[vinyasaIndex],
+            type: PoseTypes.standing,
+            duration: sunSalutationDurationSec,
+          },
+        ];
+      }
+    }
   }
 
   // Seated
@@ -223,12 +241,11 @@ export function getYogaSequence({
     fullSequence = [
       ...fullSequence,
       {
-        time: nextSecMark,
         pose: seatedPoses[index],
         type: PoseTypes.allFloor,
+        duration: poseDurationSec,
       },
     ];
-    nextSecMark += poseDurationSec;
   }
 
   // Floor front
@@ -236,12 +253,11 @@ export function getYogaSequence({
     fullSequence = [
       ...fullSequence,
       {
-        time: nextSecMark,
         pose: floorFrontPoses[index],
         type: PoseTypes.allFloor,
+        duration: poseDurationSec,
       },
     ];
-    nextSecMark += poseDurationSec;
   }
 
   // Reclining
@@ -249,12 +265,11 @@ export function getYogaSequence({
     fullSequence = [
       ...fullSequence,
       {
-        time: nextSecMark,
         pose: recliningPoses[index],
         type: PoseTypes.allFloor,
+        duration: poseDurationSec,
       },
     ];
-    nextSecMark += poseDurationSec;
   }
 
   // Shavasana
@@ -262,7 +277,6 @@ export function getYogaSequence({
     ? [
         ...fullSequence,
         {
-          time: nextSecMark,
           pose: {
             sanskrit: "Shavasana",
             english: "Corpse",
@@ -271,6 +285,7 @@ export function getYogaSequence({
             bilateral: false,
           },
           type: "shavasana",
+          duration: shavasanaSec,
         },
       ]
     : fullSequence;
