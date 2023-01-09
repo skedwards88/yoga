@@ -10,6 +10,9 @@ export default function workoutReducer(currentState, payload) {
   } else if (payload.action === "unmute") {
     return { ...currentState, muted: false };
   } else if (payload.action === "increment") {
+    // do not increment if over
+    if (currentState.status === Statuses.complete) return { ...currentState };
+
     // increment the time by 1 second
     const newElapsedSec = currentState.elapsedSec + 1;
 

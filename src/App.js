@@ -69,8 +69,9 @@ function App() {
       ></Settings>
     );
   } else if (
-    workoutState.status === Statuses.running ||
-    workoutState.status === Statuses.paused
+    (workoutState.status === Statuses.running ||
+      workoutState.status === Statuses.paused) &&
+    workoutState.elapsedSec < workoutState.totalSec
   ) {
     return (
       <Workout

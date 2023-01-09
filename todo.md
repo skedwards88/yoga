@@ -1,4 +1,4 @@
 - make buttons higher on page for ios bar?
 - add language option
 - arm balances
-- saved settings not respected?
+- save time direction setting

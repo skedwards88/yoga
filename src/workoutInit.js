@@ -24,8 +24,7 @@ export default function workoutInit({
   numSunSalutations =
     numSunSalutations ?? savedState?.numSunSalutations ?? "auto";
   includeShavasana = includeShavasana ?? savedState?.includeShavasana ?? true;
-  includeVinyasas =
-    includeVinyasas ?? savedState?.includeVinyasas ?? true;
+  includeVinyasas = includeVinyasas ?? savedState?.includeVinyasas ?? true;
 
   const yogaSequence = getYogaSequence({
     totalSec: totalSec,
@@ -36,7 +35,10 @@ export default function workoutInit({
     includeVinyasas: includeVinyasas,
   });
 
-  const actualTotalSec = yogaSequence.reduce((accumulated, nextPose) => accumulated + nextPose.duration, 0)
+  const actualTotalSec = yogaSequence.reduce(
+    (accumulated, nextPose) => accumulated + nextPose.duration,
+    0
+  );
 
   return {
     yogaSequence: yogaSequence,

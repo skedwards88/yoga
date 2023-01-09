@@ -110,7 +110,7 @@ function getStandingPoses(maxSec, poseDurationSec) {
   const numPoses = Math.floor(maxSec / poseDurationSec / 2);
 
   // if we don't really have time for any poses, return early
-  if (numPoses < 2) return []
+  if (numPoses < 2) return [];
 
   const poses = getPoses({ count: numPoses, poseType: PoseTypes.standing });
 
@@ -159,9 +159,13 @@ export function getYogaSequence({
   const minFloorSec = Math.floor(totalSec * 0.2);
 
   // Sets of standing poses fills the remaining time
-  const maxStandingSec = Math.max(0, totalSec - sunSalutationSec - minFloorSec - shavasanaSec);
+  const maxStandingSec = Math.max(
+    0,
+    totalSec - sunSalutationSec - minFloorSec - shavasanaSec
+  );
 
-  const standingSequence = maxStandingSec > 0 ? getStandingPoses(maxStandingSec, poseDurationSec) : [];
+  const standingSequence =
+    maxStandingSec > 0 ? getStandingPoses(maxStandingSec, poseDurationSec) : [];
 
   // Fill the remaining time with floor poses (seated, floor front, reclining)
   const floorSec =
