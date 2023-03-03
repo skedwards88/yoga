@@ -1,7 +1,5 @@
 # Yoga Bot
 
-:warning: Work in progress! Feel free to check out the app, but be sure to come back once it is complete.
-
 A web app that leads you through a yoga session.
 
 [Workout now!](https://skedwards88.github.io/yoga/)
@@ -10,7 +8,9 @@ A web app that leads you through a yoga session.
 
 Do you have feedback or ideas for improvement? [Open an issue](https://github.com/skedwards88/yoga/issues/new).
 
-Want more games? Visit [CnS Games](https://skedwards88.github.io/portfolio/).
+Want a fitness bot? Visit [CnS Games](https://skedwards88.github.io/fitness/).
+
+Want some games? Visit [CnS Games](https://skedwards88.github.io/portfolio/).
 
 ## Development
 
