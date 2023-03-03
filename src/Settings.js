@@ -46,7 +46,7 @@ export default function Settings({
       <div>
         <div className="setting">
           <label htmlFor="totalSec">Total (min)</label>
-          <select id="totalSec" defaultValue={workoutState.totalSec}>
+          <select id="totalSec" defaultValue={workoutState.setTotalSec}>
             <option value={5 * 60}>5</option>
             <option value={10 * 60}>10</option>
             <option value={15 * 60}>15</option>

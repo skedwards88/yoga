@@ -43,6 +43,7 @@ export default function workoutInit({
   return {
     yogaSequence: yogaSequence,
     totalSec: actualTotalSec,
+    setTotalSec: totalSec,
     poseDurationSec: poseDurationSec,
     sunSalutationDurationSec: sunSalutationDurationSec,
     elapsedSec: 0,
