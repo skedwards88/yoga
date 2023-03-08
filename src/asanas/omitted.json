@@ -168,5 +168,26 @@
     "type": "Sitting",
     "spine": "",
     "bilateral": false
+  },
+  {
+    "sanskrit": "Ashtanga Namaskara",
+    "english": "Knees, chest, chin",
+    "type": "Reclining",
+    "spine": "",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Bidalasana",
+    "english": "Cat",
+    "type": "Standing",
+    "spine": "Backbend",
+    "bilateral": false
+  },
+  {
+    "sanskrit": "Bitilasana",
+    "english": "Cow",
+    "type": "Standing",
+    "spine": "Forward bend",
+    "bilateral": false
   }
 ]
