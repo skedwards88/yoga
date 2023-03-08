@@ -97,7 +97,7 @@ function getSunSalutations(numSunSalutations, totalClassSec) {
   return unseparatedSunSalutations;
 }
 
-function getStandingPoses(maxSec, poseDurationSec) {
+function getStandingPoses(maxSec, poseDurationSec, vinyasaDuration) {
   function partitionArray(array, partitionSize) {
     let partitioned = [];
     for (let i = 0; i < array.length; i += partitionSize) {
@@ -107,7 +107,20 @@ function getStandingPoses(maxSec, poseDurationSec) {
   }
 
   // figure out how many poses we have time for, divided by 2 since we will repeat
-  const numPoses = Math.floor(maxSec / poseDurationSec / 2);
+  // one set is 5 poses/side + vinyasana
+  const setLength = (poseDurationSec * 2 * 5) + vinyasaDuration;
+  const numCompleteSets = Math.floor(maxSec / setLength);
+  const remainingTime = maxSec % setLength;
+  // If we have enough time remaining for 4 more poses + vinyasana, add them
+  let numFillerPoses = 0
+  if ((remainingTime - vinyasaDuration) > poseDurationSec * 4) {
+     numFillerPoses = Math.floor(Math.floor((remainingTime - vinyasaDuration) / (poseDurationSec )) / 2) * 2;
+     if (numFillerPoses < 4) {
+      numFillerPoses = 0
+     }
+  }
+  // Divide the number of poses by 2 since we will repeat
+  const numPoses = ((numCompleteSets * 10) + numFillerPoses) / 2
 
   // if we don't really have time for any poses, return early
   if (numPoses < 2) return [];
@@ -164,8 +177,10 @@ export function getYogaSequence({
     totalSec - sunSalutationSec - minFloorSec - shavasanaSec
   );
 
+  const vinyasaDuration = includeVinyasas ? sunSalutationDurationSec * 4 : 0;
+
   const standingSequence =
-    maxStandingSec > 0 ? getStandingPoses(maxStandingSec, poseDurationSec) : [];
+    maxStandingSec > 0 ? getStandingPoses(maxStandingSec, poseDurationSec, vinyasaDuration) : [];
 
   // Fill the remaining time with floor poses (seated, floor front, reclining)
   const floorSec =
