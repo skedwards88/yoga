@@ -2,9 +2,9 @@
 
 A web app that leads you through a yoga session.
 
-[Workout now!](https://skedwards88.github.io/yoga/)
+[Go yoga now!](https://skedwards88.github.io/yoga/)
 
-<img src="src/images/maskable_icon_512.png" alt="bot lifting weights" width="100"/>
+<img src="src/images/maskable_icon_512.png" alt="bot in downward dog" width="100"/>
 
 Do you have feedback or ideas for improvement? [Open an issue](https://github.com/skedwards88/yoga/issues/new).
 
