@@ -16,7 +16,7 @@ export default function workoutInit({
     ? JSON.parse(localStorage.getItem("yogaBotState"))
     : undefined;
 
-  totalSec = totalSec || savedState?.totalSec || 600;
+  totalSec = totalSec || savedState?.setTotalSec || 600;
   poseDurationSec = poseDurationSec || savedState?.poseDurationSec || 20;
   sunSalutationDurationSec =
     sunSalutationDurationSec || savedState?.sunSalutationDurationSec || 4;
