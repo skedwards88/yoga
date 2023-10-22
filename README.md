@@ -8,7 +8,7 @@ A web app that leads you through a yoga session.
 
 Do you have feedback or ideas for improvement? [Open an issue](https://github.com/skedwards88/yoga/issues/new).
 
-Want a fitness bot? Visit [CnS Games](https://skedwards88.github.io/fitness/).
+Want a fitness bot? Visit [Fitness Bot](https://skedwards88.github.io/fitness/).
 
 Want some games? Visit [CnS Games](https://skedwards88.github.io/portfolio/).
 

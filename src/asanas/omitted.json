@@ -189,5 +189,12 @@
     "type": "Standing",
     "spine": "Forward bend",
     "bilateral": false
+  },
+  {
+    "sanskrit": "Makarasana",
+    "english": "Crocodile",
+    "type": "Reclining",
+    "spine": "",
+    "bilateral": false
   }
 ]

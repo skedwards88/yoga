@@ -105,11 +105,11 @@
     "bilateral": true
   },
   {
-    "sanskrit": "Utkatasana",
-    "english": "Chair",
+    "sanskrit": "Parivritta Utkatasana",
+    "english": "Revolved Chair",
     "type": "Standing",
     "spine": "",
-    "bilateral": false
+    "bilateral": true
   },
   {
     "sanskrit": "Low lunge",
