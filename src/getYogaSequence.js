@@ -187,7 +187,8 @@ export function getYogaSequence({
     totalSec -
     sunSalutationSec -
     shavasanaSec -
-    standingSequence.length * poseDurationSec;
+    standingSequence.length * poseDurationSec -
+    Math.ceil(standingSequence.length / 10) * vinyasaDuration;
   const numClosingPoses = Math.round(floorSec / poseDurationSec);
   const numSeatedPoses = Math.floor(numClosingPoses / 3);
   const numFloorFrontPoses = Math.floor(numClosingPoses / 3);
