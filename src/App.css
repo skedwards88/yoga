@@ -1,5 +1,6 @@
 body {
   --font-size: 5vmin;
+
   background-color: #d9a4eb;
   font-family: sans-serif;
   font-size: var(--font-size);
@@ -24,7 +25,6 @@ button {
   background-color: purple;
   border: 3px solid white;
   border-radius: 5px;
-  color: black;
   margin: 0;
   padding: 8px 10px;
   color: white;
@@ -84,9 +84,11 @@ button {
 #timeButton.noTime {
   background-image: url("./images/noTime.svg");
 }
+
 #timeButton.countUp {
   background-image: url("./images/countUp.svg");
 }
+
 #timeButton.countDown {
   background-image: url("./images/countDown.svg");
 }
@@ -185,8 +187,8 @@ input[type="checkbox" i]:checked {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
   border: 5px solid white;
 }
 
@@ -208,7 +210,7 @@ input[type="checkbox" i]:checked {
   display: flex;
   flex-direction: row;
   width: 100%;
-  margin: 3vh 0 5vh 0;
+  margin: 3vh 0 5vh;
 }
 
 .progress-label {
@@ -231,6 +233,6 @@ input[type="checkbox" i]:checked {
 
 .warning {
   text-transform: none;
-  color: rgb(236, 58, 58);
+  color: rgb(236 58 58);
   text-align: center;
 }

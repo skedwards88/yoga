@@ -30,7 +30,6 @@ function App() {
     }
     try {
       wakeLock.current = await navigator.wakeLock.request("screen");
-      console.log(`2. wakeLock is ${wakeLock}`);
 
       wakeLock.current.addEventListener("release", () => {
         console.log("Screen Wake Lock released:");
@@ -38,7 +37,7 @@ function App() {
     } catch (err) {
       console.error(`${err.name}, ${err.message}`);
     }
-  });
+  }, []);
 
   const releaseWakeLock = React.useCallback(async () => {
     console.log("releasing wakeLock");
@@ -47,7 +46,7 @@ function App() {
       return;
     }
     await wakeLock.current.release();
-  });
+  }, []);
 
   React.useEffect(() => {
     if (
@@ -58,6 +57,7 @@ function App() {
     } else {
       releaseWakeLock();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [workoutState.status]);
 
   if (showSettings) {

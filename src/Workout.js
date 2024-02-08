@@ -63,6 +63,7 @@ export default function Workout({
       );
     }
     return () => clearInterval(timerID);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [workoutState.status]);
 
   function handleVisibilityChange() {
