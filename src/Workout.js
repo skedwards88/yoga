@@ -1,9 +1,9 @@
 import React from "react";
-import { Statuses } from "./statuses";
+import {Statuses} from "./statuses";
 
 const TimeSettings = ["countUp", "countDown", "noTime"];
 
-function Time({ elapsedSec, totalSec, timeSetting }) {
+function Time({elapsedSec, totalSec, timeSetting}) {
   if (TimeSettings[timeSetting] === "noTime") {
     return <></>;
   }
@@ -21,7 +21,7 @@ function Time({ elapsedSec, totalSec, timeSetting }) {
   }
 }
 
-function ProgressBar({ progressWidth, tickMarks = [] }) {
+function ProgressBar({progressWidth, tickMarks = []}) {
   const ticks = tickMarks.map((tick, i) => (
     <div
       key={i}
@@ -58,8 +58,8 @@ export default function Workout({
       workoutState.elapsedSec < workoutState.totalSec
     ) {
       timerID = setInterval(
-        () => dispatchWorkoutState({ action: "increment" }),
-        1000
+        () => dispatchWorkoutState({action: "increment"}),
+        1000,
       );
     }
     return () => clearInterval(timerID);
@@ -72,7 +72,7 @@ export default function Workout({
       (document.hidden || document.msHidden || document.webkitHidden) &&
       workoutState.status === Statuses.running
     ) {
-      dispatchWorkoutState({ action: "pause" });
+      dispatchWorkoutState({action: "pause"});
     }
   }
 
@@ -137,23 +137,23 @@ export default function Workout({
         {workoutState.status === Statuses.running ? (
           <button
             id="pauseButton"
-            onClick={() => dispatchWorkoutState({ action: "pause" })}
+            onClick={() => dispatchWorkoutState({action: "pause"})}
           ></button>
         ) : (
           <button
             id="playButton"
-            onClick={() => dispatchWorkoutState({ action: "play" })}
+            onClick={() => dispatchWorkoutState({action: "play"})}
           ></button>
         )}
         {workoutState.muted ? (
           <button
             id="unmuteButton"
-            onClick={() => dispatchWorkoutState({ action: "unmute" })}
+            onClick={() => dispatchWorkoutState({action: "unmute"})}
           ></button>
         ) : (
           <button
             id="muteButton"
-            onClick={() => dispatchWorkoutState({ action: "mute" })}
+            onClick={() => dispatchWorkoutState({action: "mute"})}
           ></button>
         )}
         <button
@@ -166,13 +166,13 @@ export default function Workout({
         <button
           id="settingsButton"
           onClick={() => {
-            dispatchWorkoutState({ action: "pause" });
+            dispatchWorkoutState({action: "pause"});
             setShowSettings(true);
           }}
         ></button>
         <button
           id="cancelButton"
-          onClick={() => dispatchWorkoutState({ action: "cancel" })}
+          onClick={() => dispatchWorkoutState({action: "cancel"})}
         ></button>
       </div>
     </div>

@@ -1,17 +1,17 @@
 import speak from "./speak";
-import { Statuses } from "./statuses";
+import {Statuses} from "./statuses";
 import workoutInit from "./workoutInit";
 
 export default function workoutReducer(currentState, payload) {
   if (payload.action === "newWorkout") {
-    return workoutInit({ ...payload, startWorkout: true });
+    return workoutInit({...payload, startWorkout: true});
   } else if (payload.action === "mute") {
-    return { ...currentState, muted: true };
+    return {...currentState, muted: true};
   } else if (payload.action === "unmute") {
-    return { ...currentState, muted: false };
+    return {...currentState, muted: false};
   } else if (payload.action === "increment") {
     // do not increment if over
-    if (currentState.status === Statuses.complete) return { ...currentState };
+    if (currentState.status === Statuses.complete) return {...currentState};
 
     // increment the time by 1 second
     const newElapsedSec = currentState.elapsedSec + 1;
@@ -41,7 +41,7 @@ export default function workoutReducer(currentState, payload) {
             yogaSequence[currentPoseIndex + 1].pose.side
               ? `. ${yogaSequence[currentPoseIndex + 1].pose.side} side`
               : ""
-          }`
+          }`,
         ); // todo language
       }
       return {
@@ -59,13 +59,13 @@ export default function workoutReducer(currentState, payload) {
       };
     }
   } else if (payload.action === "play") {
-    return { ...currentState, status: Statuses.running };
+    return {...currentState, status: Statuses.running};
   } else if (payload.action === "pause") {
-    return { ...currentState, status: Statuses.paused };
+    return {...currentState, status: Statuses.paused};
   } else if (payload.action === "cancel") {
-    return { ...currentState, status: Statuses.notStarted };
+    return {...currentState, status: Statuses.notStarted};
   } else {
     console.log(`unknown ${console.log(JSON.stringify(payload))}`);
-    return { ...currentState };
+    return {...currentState};
   }
 }
