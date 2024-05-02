@@ -1,5 +1,5 @@
-import { getYogaSequence } from "./getYogaSequence";
-import { Statuses } from "./statuses";
+import {getYogaSequence} from "./getYogaSequence";
+import {Statuses} from "./statuses";
 
 export default function workoutInit({
   totalSec,
@@ -37,7 +37,7 @@ export default function workoutInit({
 
   const actualTotalSec = yogaSequence.reduce(
     (accumulated, nextPose) => accumulated + nextPose.duration,
-    0
+    0,
   );
 
   return {

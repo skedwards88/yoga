@@ -6,9 +6,9 @@ import allFloorFrontPoses from "./asanas/floorFront.json";
 import allRecliningPoses from "./asanas/reclining.json";
 import allArmBalancePoses from "./asanas/armBalance.json";
 import shuffleArray from "./shuffleArray";
-import { PoseTypes } from "./PoseTypes";
+import {PoseTypes} from "./PoseTypes";
 
-function getPoses({ count, poseType, matchSides = false }) {
+function getPoses({count, poseType, matchSides = false}) {
   let allPoses;
   switch (poseType) {
     case PoseTypes.sunSalutations:
@@ -66,8 +66,8 @@ function getPoses({ count, poseType, matchSides = false }) {
     if (matchSides && pose.bilateral) {
       selectedPoses = [
         ...selectedPoses,
-        { ...pose, side: "first" },
-        { ...pose, side: "second" },
+        {...pose, side: "first"},
+        {...pose, side: "second"},
       ];
       index++;
     } else {
@@ -83,7 +83,7 @@ function getSunSalutations(numSunSalutations, totalClassSec) {
   if (numSunSalutations === "auto") {
     numSunSalutations = Math.min(
       Math.max(Math.floor(totalClassSec / (5 * 60)), 1),
-      5
+      5,
     );
   }
 
@@ -116,7 +116,7 @@ function getStandingPoses(maxSec, poseDurationSec, vinyasaDuration) {
   if (remainingTime - vinyasaDuration > poseDurationSec * 4) {
     numFillerPoses =
       Math.floor(
-        Math.floor((remainingTime - vinyasaDuration) / poseDurationSec) / 2
+        Math.floor((remainingTime - vinyasaDuration) / poseDurationSec) / 2,
       ) * 2;
     if (numFillerPoses < 4) {
       numFillerPoses = 0;
@@ -128,7 +128,7 @@ function getStandingPoses(maxSec, poseDurationSec, vinyasaDuration) {
   // if we don't really have time for any poses, return early
   if (numPoses < 2) return [];
 
-  const poses = getPoses({ count: numPoses, poseType: PoseTypes.standing });
+  const poses = getPoses({count: numPoses, poseType: PoseTypes.standing});
 
   // divide the poses into sets of 5 (or as close as possible)
   const posesPerSet = 5;
@@ -177,7 +177,7 @@ export function getYogaSequence({
   // Sets of standing poses fills the remaining time
   const maxStandingSec = Math.max(
     0,
-    totalSec - sunSalutationSec - minFloorSec - shavasanaSec
+    totalSec - sunSalutationSec - minFloorSec - shavasanaSec,
   );
 
   const vinyasaDuration = includeVinyasas ? sunSalutationDurationSec * 4 : 0;

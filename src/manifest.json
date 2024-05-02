@@ -2,12 +2,15 @@
   "name": "Yoga Bot",
   "short_name": "Yoga Bot",
   "description": "A yoga app",
+  "id": "?yoga_bot=20240502",
   "dir": "auto",
   "lang": "en-US",
   "display": "standalone",
-  "start_url": "../.",
+  "start_url": "https://skedwards88.github.io/yoga/",
+  "scope": "/yoga/",
   "background_color": "#595959",
   "theme_color": "#d9a4eb",
+  "shortcuts": [],
   "icons": [
     {
       "src": "icon.svg",

@@ -1,5 +1,5 @@
 import React from "react";
-import { PoseTypes } from "./PoseTypes";
+import {PoseTypes} from "./PoseTypes";
 
 export default function Settings({
   setShowSettings,
@@ -11,10 +11,10 @@ export default function Settings({
 
     const newTotalSec = parseInt(event.target.elements.totalSec.value);
     const newPoseDurationSec = parseInt(
-      event.target.elements.poseDurationSec.value
+      event.target.elements.poseDurationSec.value,
     );
     const newSunSalutationDurationSec = parseInt(
-      event.target.elements.sunSalutationDurationSec.value
+      event.target.elements.sunSalutationDurationSec.value,
     );
 
     const newNumSunSalutations =

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Home({ setShowSettings }) {
+export default function Home({setShowSettings}) {
   const homeScreenPhrases = [
     // todo add more?
     "Mindfulness takes practice",
