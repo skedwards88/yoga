@@ -51,7 +51,7 @@ export default function Settings({
             <option value={10 * 60}>10</option>
             <option value={15 * 60}>15</option>
             <option value={20 * 60}>20</option>
-            <option value={25 * 60}>20</option>
+            <option value={25 * 60}>25</option>
             <option value={30 * 60}>30</option>
             <option value={45 * 60}>45</option>
             <option value={60 * 60}>60</option>
